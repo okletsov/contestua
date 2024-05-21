@@ -1,0 +1,55 @@
+SELECT 
+	(
+		row_number() over(
+			order by 
+				t2.saldo desc
+		)
+	) as place
+	, t2.nickname
+	, t2.profit
+	, t2.offset
+	, t2.saldo
+from (
+	SELECT
+		t1.nickname
+		, t1.contest_profit as profit
+		, (case when t1.offset is null then 0 else t1.offset end) as `offset`
+		, (t1.contest_profit + 
+			case when t1.offset is null then 0 else t1.offset end
+		) as saldo
+	from (
+		SELECT 
+			cf.user_id 
+			, un.nickname 
+			, SUM(cf.action_value) as contest_profit
+			, (
+				SELECT 
+					sum(fo.action_value) 
+				from finance_offset fo
+				where fo.user_id = cf.user_id 
+				group by fo.user_id
+			) as `offset`
+		from cr_finance cf 
+			join user_nickname un on un.user_id = cf.user_id 
+		where 1=1
+			and un.is_active = 1
+			and un.nickname not in ('DavidsKV', 'Dnepr', 'JovtoBlakutni', 'Sayda', 'Ars', 'BeTeLGeuSe')
+			and cf.contest_id not in (
+				SELECT 
+					id
+				from contest c 
+				where c.`type` = 'seasonal'
+				and c.is_active = 1
+			)
+			and cf.contest_id not in (
+				SELECT 
+					sxmc.monthly_contest_id
+				from seasonal_x_monthly_contest sxmc
+					join contest c2 on c2.id = sxmc.seasonal_contest_id
+				where c2.`type` = 'seasonal'
+					and c2.is_active = 1 
+			)
+		group by cf.user_id 
+		order by un.nickname 
+	) t1
+) t2;

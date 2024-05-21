@@ -1,0 +1,79 @@
+SELECT
+	row_number() over (
+		order by 
+			ca.sum_annual_points desc
+			, ca.best_place asc
+			, ca.best_place_count desc
+			, ca.second_best_place asc
+			, ca.second_best_place_count desc
+			, ca.third_best_place asc 
+			, ca.avg_roi desc
+    ) AS `place`
+	, un.nickname
+	, (
+		SELECT 
+			cg.annual_points
+		from cr_general cg
+		where 1=1
+			and cg.contest_id = (
+				SELECT 
+					c2.id 
+				from annual_x_seasonal_contest axsc 
+					join contest c1 on c1.id = axsc.annual_contest_id 
+					join contest c2 on c2.id = axsc.seasonal_contest_id 
+				where 1=1
+					and c1.`type` = 'annual'
+					and c1.`year` = c.`year` 
+					and c2.`type` = 'seasonal'
+					and c2.season = 'Autumn'
+			)
+			and cg.user_id = un.user_id 
+	) as autumn
+	, (
+		SELECT 
+			cg.annual_points
+		from cr_general cg
+		where 1=1
+			and cg.contest_id = (
+				SELECT 
+					c2.id 
+				from annual_x_seasonal_contest axsc 
+					join contest c1 on c1.id = axsc.annual_contest_id 
+					join contest c2 on c2.id = axsc.seasonal_contest_id 
+				where 1=1
+					and c1.`type` = 'annual'
+					and c1.`year` = c.`year` 
+					and c2.`type` = 'seasonal'
+					and c2.season = 'Winter'
+			)
+			and cg.user_id = un.user_id 
+	) as winter
+	, (
+		SELECT 
+			cg.annual_points
+		from cr_general cg
+		where 1=1
+			and cg.contest_id = (
+				SELECT 
+					c2.id 
+				from annual_x_seasonal_contest axsc 
+					join contest c1 on c1.id = axsc.annual_contest_id 
+					join contest c2 on c2.id = axsc.seasonal_contest_id 
+				where 1=1
+					and c1.`type` = 'annual'
+					and c1.`year` = c.`year` 
+					and c2.`type` = 'seasonal'
+					and c2.season = 'Spring'
+			)
+			and cg.user_id = un.user_id 
+	) as spring
+	, ca.avg_roi
+	, ca.sum_annual_points as points
+from user_nickname un
+	join cr_annual ca on ca.user_id = un.user_id
+	join contest c on c.id = ca.contest_id
+where 1=1
+	and un.is_active = 1
+	and c.`type` = 'annual'
+	and c.`year` = {{Select_contest.selectedOptionValue}}
+;

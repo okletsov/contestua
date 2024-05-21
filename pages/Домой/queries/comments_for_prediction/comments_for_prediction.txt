@@ -1,0 +1,10 @@
+SELECT 
+	com.id
+	, un.nickname
+	, com.comment
+	, com.date_added
+FROM comments com
+	join user_nickname un on un.user_id = com.user_id
+where com.prediction_id = {{appsmith.store.selectedPredictionData.id}}
+	and un.is_active = 1
+order by com.date_added asc;

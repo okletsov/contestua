@@ -1,0 +1,21 @@
+SELECT 
+	row_number() over (
+order by
+    fa.id asc) AS `place`
+	, un.nickname 
+	, cf.action_value 
+	, fa.description_rus
+from cr_finance cf 
+	join finance_actions fa on fa.id = cf.finance_action_id
+	join user_nickname un on un.user_id = cf.user_id 
+where 1=1
+	and un.is_active = 1
+	and cf.finance_action_id != 12
+	and (
+		cf.contest_id = '{{Select_contest.selectedOptionValue}}'
+		or cf.contest_id in (
+			SELECT 
+				sxmc.monthly_contest_id 
+			from seasonal_x_monthly_contest sxmc
+			where sxmc.seasonal_contest_id = '{{Select_contest.selectedOptionValue}}'
+		));

@@ -1,0 +1,21 @@
+SELECT 
+	DISTINCT CASE 
+		when t1.seasonal_contest_id is null then t1.contest_id
+		else t1.seasonal_contest_id
+	END as contest_id
+	, case
+        when `c`.`season` = 'Winter' then concat(`c`.`season`, ' ', right(`c`.`year`, 2), '-', right(`c`.`year`, 2) + 1)
+        else concat(`c`.`season`, ' ', right(`c`.`year`, 2))
+    end AS `label`
+from ( 
+	SELECT 
+		DISTINCT cg.contest_id 
+		, (
+			SELECT sxmc.seasonal_contest_id
+			from seasonal_x_monthly_contest sxmc 
+			where sxmc.monthly_contest_id = cg.contest_id 
+		) as seasonal_contest_id
+	from cr_general cg
+) t1
+	join contest c on c.id = t1.contest_id
+order by c.start_date desc;

@@ -1,0 +1,1 @@
+SELECT * from web_cr_winning_strick;

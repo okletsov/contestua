@@ -1,0 +1,29 @@
+SELECT 
+	row_number() over (
+order by
+    t1.prize + t1.participation_fee desc) AS `place`
+    , t1.nickname
+    , t1.prize
+    , t1.participation_fee
+    , t1.prize + t1.participation_fee as total
+from (
+	SELECT 
+		un.nickname 
+		, SUM(case when cf.finance_action_id = 12 then 0 else cf.action_value end) as prize
+		, SUM(case when cf.finance_action_id != 12 then 0 else cf.action_value end) as participation_fee
+	from cr_finance cf 
+		join finance_actions fa on fa.id = cf.finance_action_id
+		join user_nickname un on un.user_id = cf.user_id 
+	where 1=1
+		and un.is_active = 1
+		and (
+			cf.contest_id = '{{Select_contest.selectedOptionValue}}'
+			or cf.contest_id in (
+				SELECT 
+					sxmc.monthly_contest_id 
+				from seasonal_x_monthly_contest sxmc
+				where sxmc.seasonal_contest_id = '{{Select_contest.selectedOptionValue}}'
+			))
+	group by cf.user_id
+) t1 
+order by place;

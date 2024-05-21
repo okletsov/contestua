@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "utils",
+    "pageId": "Фид",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Фид_utils",
+  "deleted": false,
+  "gitSyncId": "661eca10b7e3352fe43e8a8c_66230b3604b7eb2dc2f130e7"
+}

@@ -1,0 +1,11 @@
+SELECT 
+	row_number() over (
+order by
+    cbo.user_pick_value desc
+	) AS place
+	, un.nickname
+	, cbo.user_pick_value
+from cr_biggest_odds cbo
+	join user_nickname un on un.user_id = cbo.user_id
+where un.is_active = 1
+	and contest_id = '{{Select_contest.selectedOptionValue}}';

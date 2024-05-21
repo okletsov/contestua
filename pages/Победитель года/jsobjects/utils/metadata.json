@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "utils",
+    "pageId": "Победитель года",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Победитель года_utils",
+  "deleted": false,
+  "gitSyncId": "661eca10b7e3352fe43e8a8c_bf3d27d8-c5d2-4a7f-ac78-73c31b8eea75"
+}

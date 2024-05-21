@@ -1,0 +1,29 @@
+SELECT 
+	* ,
+	(
+		SELECT 
+	 		count(id) 
+	  from appsmith_finished_bets afb2 
+		where afb.seasonal_contest_id = afb2.seasonal_contest_id
+			and 
+				case when {{Select_participant.isValid}} then afb2.user_id = {{Select_participant.selectedOptionValue}}
+				else afb2.user_id in (
+					select 
+						uscp.user_id 
+					from user_seasonal_contest_participation uscp
+					where uscp.contest_id = {{Select_contest.selectedOptionValue}}
+				) end
+	) as bets_count
+FROM appsmith_finished_bets afb
+where afb.seasonal_contest_id = {{Select_contest.selectedOptionValue}}
+	and 
+		CASE 
+			when {{Select_participant.isValid}} then afb.user_id = {{Select_participant.selectedOptionValue}}
+			else afb.user_id in (select 
+							uscp.user_id 
+						from user_seasonal_contest_participation uscp
+						where uscp.contest_id = {{Select_contest.selectedOptionValue}}
+				)
+		end
+LIMIT {{List_bets.pageSize}}
+OFFSET {{ (List_bets.pageNo - 1) * List_bets.pageSize }};

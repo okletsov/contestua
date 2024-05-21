@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "utils",
+    "pageId": "Рейтинг",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Рейтинг_utils",
+  "deleted": false,
+  "gitSyncId": "661eca10b7e3352fe43e8a8c_9aa4f774-1e4b-4cb1-bb08-b8451b600f05"
+}

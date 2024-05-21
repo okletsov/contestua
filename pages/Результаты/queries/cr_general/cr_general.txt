@@ -1,0 +1,13 @@
+SELECT 
+	cg.place
+	, un.nickname
+	, cg.final_bets_count
+	, cg.active_days
+	, cg.won
+	, cg.lost
+	, cg.units
+	, cg.roi
+from cr_general cg
+	join user_nickname un on un.user_id = cg.user_id
+where un.is_active = 1
+	and contest_id = '{{Select_contest.selectedOptionValue}}';

@@ -1,0 +1,1 @@
+SELECT * FROM appsmith_check_rules;

@@ -1,0 +1,47 @@
+SELECT 
+	(
+		row_number() over(
+			order by 
+				t1.total desc
+		)
+	) as place
+	, t1.nickname
+	, t1.awards
+	, t1.fees
+	, t1.total
+from (
+	select
+		un.nickname 
+		, sum(
+			CASE 
+				when cf.action_value > 0 then cf.action_value else 0 
+			END
+		) as awards
+		, sum(
+			CASE 
+				when cf.action_value < 0 then cf.action_value else 0 
+			END
+		) as fees
+		, SUM(cf.action_value) as total 
+	from cr_finance cf 
+		join user_nickname un on un.user_id = cf.user_id 
+	where 1=1
+		and un.is_active = 1
+		and un.nickname not in ('DavidsKV', 'Dnepr', 'JovtoBlakutni', 'Sayda', 'Ars', 'BeTeLGeuSe')
+		and cf.contest_id not in (
+				SELECT 
+					id
+				from contest c 
+				where c.`type` = 'seasonal'
+				and c.is_active = 1
+			)
+			and cf.contest_id not in (
+				SELECT 
+					sxmc.monthly_contest_id
+				from seasonal_x_monthly_contest sxmc
+					join contest c2 on c2.id = sxmc.seasonal_contest_id
+				where c2.`type` = 'seasonal'
+					and c2.is_active = 1 
+			)
+	GROUP by cf.user_id 
+) t1;

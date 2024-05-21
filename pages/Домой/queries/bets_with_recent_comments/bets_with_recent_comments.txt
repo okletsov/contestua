@@ -1,0 +1,1 @@
+SELECT * FROM appsmith_bets_with_recent_comments;

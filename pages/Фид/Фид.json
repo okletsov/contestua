@@ -1,0 +1,112 @@
+{
+  "unpublishedPage": {
+    "name": "Фид",
+    "slug": "",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 2020,
+          "containerStyle": "none",
+          "snapRows": 66,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 89,
+          "minHeight": 680,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Фид_allowed_to_comment",
+              "name": "allowed_to_comment",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Фид_comments_for_prediction",
+              "name": "comments_for_prediction",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.store.selectedPredictionData.id"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Фид_utils.clearStore",
+              "name": "utils.clearStore",
+              "collectionId": "Фид_utils",
+              "clientSideExecution": true,
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "function () {\n  clearStore();\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Фид_contests_numbered",
+              "name": "contests_numbered",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Фид_finished_bets",
+              "name": "finished_bets",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Select_participant.selectedOptionValue",
+                "List_bets.pageSize",
+                " (List_bets.pageNo - 1) * List_bets.pageSize ",
+                "Select_contest.selectedOptionValue",
+                "Select_participant.isValid"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Фид_participants_in_contest",
+              "name": "participants_in_contest",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Select_contest.selectedOptionValue"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Фид",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "661eca10b7e3352fe43e8a8c_662086c852d4335f455f049e"
+}

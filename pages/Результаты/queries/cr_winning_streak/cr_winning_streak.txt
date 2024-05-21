@@ -1,0 +1,13 @@
+SELECT 
+	row_number() over (
+order by
+    cws.strick_length desc
+		, cws.strick_avg_odds desc
+	) AS place
+	, un.nickname
+	, cws.strick_avg_odds
+	, cws.strick_length
+from cr_winning_strick cws
+	join user_nickname un on un.user_id = cws.user_id
+where un.is_active = 1
+	and cws.contest_id = '{{Select_contest.selectedOptionValue}}';

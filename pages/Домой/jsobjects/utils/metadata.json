@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "utils",
+    "pageId": "Домой",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [],
+    "userPermissions": []
+  },
+  "id": "Домой_utils",
+  "deleted": false,
+  "gitSyncId": "65f9bcf0cd35c13b06fb8f31_6615fe23af144a4cad8dcb9a"
+}

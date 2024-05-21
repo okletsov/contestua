@@ -1,0 +1,8 @@
+INSERT INTO comments (id, prediction_id, user_id, comment, date_added)
+  VALUES (
+		uuid(), 
+		'{{appsmith.store.selectedPredictionData.id}}', 
+		'{{appsmith.store.commentAuthor}}', 
+		'{{RichTextEditor_comment.text.length > 0 ? RichTextEditor_comment.text : RichTextEditor_commentVC.text}}'
+		, CURRENT_TIMESTAMP()
+	);

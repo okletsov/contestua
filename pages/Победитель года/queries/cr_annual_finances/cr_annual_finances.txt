@@ -1,0 +1,14 @@
+SELECT 
+	row_number() over (
+		order by cf.action_value desc		
+    ) AS `place`
+	, un.nickname 
+	, cf.action_value as prize
+	, fa.description_rus 
+from cr_finance cf
+	join contest c on c.id = cf.contest_id 
+	join user_nickname un on un.user_id = cf.user_id
+	join finance_actions fa on fa.id = cf.finance_action_id 
+where un.is_active = 1
+	and c.`type` = 'annual'
+	and c.`year` = {{Select_contest.selectedOptionValue}};

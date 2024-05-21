@@ -1,0 +1,1 @@
+SELECT * FROM web_cr_raw_ongoing;

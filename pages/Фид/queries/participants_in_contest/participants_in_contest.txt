@@ -1,0 +1,9 @@
+SELECT 
+	un.nickname as 'label',
+	un.user_id as 'value'
+FROM user_seasonal_contest_participation uscp
+	join user_nickname un on un.user_id = uscp.user_id
+where 1=1
+	and un.is_active = 1
+	and uscp.contest_id = {{Select_contest.selectedOptionValue}}
+order by un.nickname;
