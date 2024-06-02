@@ -37,7 +37,7 @@
     "dynamicHeight": "AUTO_HEIGHT",
     "widgetId": "1r15x1d8yd",
     "minWidth": 450,
-    "isVisible": "{{cr_raw_ongoing.data.length === 0 ? false : true}}",
+    "isVisible": "{{cr_raw_ongoing.data.length === 0 ? true : false}}",
     "fontStyle": "BOLD",
     "textColor": "rgba(255, 255, 255, 0.9)",
     "version": 1,
