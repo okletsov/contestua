@@ -10,7 +10,8 @@
         {"key": "groupButtons.groupButtonqjdyfjzzd1.onClick"},
         {"key": "groupButtons.groupButton3.isDisabled"},
         {"key": "groupButtons.groupButton1.isDisabled"},
-        {"key": "groupButtons.groupButton1.onClick"}
+        {"key": "groupButtons.groupButton1.onClick"},
+        {"key": "groupButtons.groupButton1.isVisible"}
     ],
     "displayName": "Button Group",
     "iconSVG": "https://appcdn.appsmith.com/static/media/icon.bb8db4853027d74a78963c3375841e4b.svg",
@@ -81,7 +82,7 @@
             "label": "Недавние - {{recent_bets.data.length}}",
             "id": "groupButton1",
             "placement": "CENTER",
-            "isVisible": true,
+            "isVisible": "true",
             "isDisabled": "{{recent_bets.data.length === 0 ? true: false}}"
         },
         "groupButton2": {
