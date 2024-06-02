@@ -28,14 +28,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Рейтинг_active_contests",
-              "name": "active_contests",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Рейтинг_cr_raw_ongoing",
               "name": "cr_raw_ongoing",
               "confirmBeforeExecute": false,
