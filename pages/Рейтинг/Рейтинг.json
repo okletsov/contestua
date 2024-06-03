@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 810,
+          "bottomRow": 930,
           "containerStyle": "none",
           "snapRows": 66,
           "parentRowSpace": 1,
@@ -27,6 +27,14 @@
         },
         "layoutOnLoadActions": [
           [
+            {
+              "id": "Рейтинг_contest_labels",
+              "name": "contest_labels",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "Рейтинг_cr_raw_ongoing",
               "name": "cr_raw_ongoing",
