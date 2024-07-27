@@ -1,47 +1,57 @@
 {
-    "needsErrorInfo": false,
-    "boxShadow": "none",
-    "mobileBottomRow": 10,
-    "widgetName": "IconButton_refresh",
-    "onClick": "{{cr_raw_ongoing.run().then(() => {});\ncr_biggest_odd.run();\ncr_winning_streak.run();\nrecent_bets.run();\nfuture_bets.run();\nlive_bets.run();\ndop_stavki.run();\nlast_data_update.run();\ncr_raw_ongoing_2nd_month.run();\ncheck_rules.run();\nbets_with_recent_comments.run()}}",
-    "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "dynamicPropertyPathList": [],
-    "displayName": "Icon button",
-    "iconSVG": "https://appcdn.appsmith.com/static/media/icon.b08054586989b185a0801e9a34f8ad49.svg",
-    "searchTags": [
-        "click",
-        "submit"
-    ],
-    "topRow": 0,
-    "bottomRow": 5,
-    "parentRowSpace": 10,
-    "type": "ICON_BUTTON_WIDGET",
-    "hideCard": false,
-    "mobileRightColumn": 4,
-    "animateLoading": true,
-    "parentColumnSpace": 14.234375,
-    "dynamicTriggerPathList": [{"key": "onClick"}],
-    "leftColumn": 0,
-    "dynamicBindingPathList": [
-        {"key": "buttonColor"},
-        {"key": "borderRadius"}
-    ],
-    "isDisabled": false,
-    "key": "d6yk8gbb49",
-    "isDeprecated": false,
-    "rightColumn": 9,
-    "iconName": "refresh",
-    "widgetId": "3h1zsblpee",
-    "minWidth": 50,
-    "isVisible": true,
-    "version": 1,
-    "parentId": "0",
-    "tags": ["Buttons"],
-    "renderMode": "CANVAS",
-    "isLoading": false,
-    "mobileTopRow": 6,
-    "responsiveBehavior": "hug",
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "mobileLeftColumn": 0,
-    "buttonVariant": "PRIMARY"
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 5,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonVariant": "PRIMARY",
+  "displayName": "Icon button",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "hideCard": false,
+  "iconName": "refresh",
+  "iconSVG": "https://appcdn.appsmith.com/static/media/icon.b08054586989b185a0801e9a34f8ad49.svg",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "d6yk8gbb49",
+  "leftColumn": 0,
+  "minWidth": 50,
+  "mobileBottomRow": 10,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 4,
+  "mobileTopRow": 6,
+  "needsErrorInfo": false,
+  "onClick": "{{cr_raw_ongoing.run().then(() => {});\ncr_biggest_odd.run();\ncr_winning_streak.run();\nrecent_bets.run();\nfuture_bets.run();\nlive_bets.run();\ndop_stavki.run();\nlast_data_update.run();\ncr_raw_ongoing_2nd_month.run();\ncheck_rules.run();\nbets_with_recent_comments.run()}}",
+  "parentColumnSpace": 14.234375,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 9,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "tags": [
+    "Buttons"
+  ],
+  "topRow": 0,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "3h1zsblpee",
+  "widgetName": "IconButton_refresh"
 }

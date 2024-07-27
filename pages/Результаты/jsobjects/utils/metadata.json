@@ -1,15 +1,11 @@
 {
+  "gitSyncId": "661eca10b7e3352fe43e8a8c_d5c6e82c-c144-47c6-ac15-fdef569016df",
+  "id": "Результаты_utils",
   "unpublishedCollection": {
     "name": "utils",
     "pageId": "Результаты",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "actions": [],
-    "archivedActions": [],
-    "variables": [],
-    "userPermissions": []
-  },
-  "id": "Результаты_utils",
-  "deleted": false,
-  "gitSyncId": "661eca10b7e3352fe43e8a8c_d5c6e82c-c144-47c6-ac15-fdef569016df"
+    "variables": []
+  }
 }

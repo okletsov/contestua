@@ -1,123 +1,153 @@
 {
-    "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-    "requiresFlatWidgetChildren": true,
-    "isCanvas": true,
-    "templateHeight": 160,
-    "iconSVG": "https://appcdn.appsmith.com/static/media/icon.5c9511142b3624c7491c5442e8ccd0ef.svg",
-    "topRow": 4,
-    "pageSize": 10,
-    "type": "LIST_WIDGET_V2",
-    "itemSpacing": "8",
-    "animateLoading": true,
-    "dynamicBindingPathList": [
-        {"key": "currentItemsView"},
-        {"key": "selectedItemView"},
-        {"key": "triggeredItemView"},
-        {"key": "accentColor"},
-        {"key": "boxShadow"},
-        {"key": "listData"},
-        {"key": "primaryKeys"},
-        {"key": "defaultSelectedItem"}
-    ],
-    "leftColumn": 0,
-    "serverSidePagination": false,
-    "enhancements": true,
-    "children": [{
-        "needsErrorInfo": false,
-        "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-        "mobileBottomRow": 400,
-        "widgetName": "Canvas1Copy",
-        "displayName": "Canvas",
-        "topRow": 0,
-        "bottomRow": 1950,
-        "parentRowSpace": 1,
-        "type": "CANVAS_WIDGET",
-        "canExtend": false,
-        "hideCard": true,
-        "dropDisabled": true,
-        "openParentPropertyPane": true,
-        "minHeight": 400,
-        "mobileRightColumn": 164.25,
-        "noPad": true,
-        "parentColumnSpace": 1,
-        "leftColumn": 0,
-        "dynamicBindingPathList": [
-            {"key": "borderRadius"},
-            {"key": "boxShadow"}
-        ],
-        "key": "ym15ft1578",
-        "isDeprecated": false,
-        "rightColumn": 164.25,
-        "detachFromLayout": true,
-        "dynamicHeight": "AUTO_HEIGHT",
-        "widgetId": "707puwbkdc",
-        "containerStyle": "none",
-        "minWidth": 450,
-        "isVisible": true,
-        "version": 1,
-        "parentId": "ngzqa56zrj",
-        "renderMode": "CANVAS",
-        "isLoading": false,
-        "mobileTopRow": 0,
-        "responsiveBehavior": "fill",
-        "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-        "mobileLeftColumn": 0,
-        "maxDynamicHeight": 9000,
-        "minDynamicHeight": 4,
-        "flexLayers": []
-    }],
-    "flexVerticalAlignment": "start",
-    "itemBackgroundColor": "#FFFFFF",
-    "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-    "isVisible": true,
-    "tags": [
-        "Suggested",
-        "Display"
-    ],
-    "hasMetaWidgets": true,
-    "isLoading": false,
-    "mainCanvasId": "707puwbkdc",
-    "borderRadius": "0.375rem",
-    "originalBottomRow": 201,
-    "additionalStaticProps": [
-        "level",
-        "levelData",
-        "prefixMetaWidgetId",
-        "metaWidgetId"
-    ],
-    "needsErrorInfo": false,
-    "mobileBottomRow": 156,
-    "currentItemsView": "{{[]}}",
-    "triggeredItemView": "{{{}}}",
-    "widgetName": "List_bets",
-    "listData": "{{utils.getPredictionsForModal()}}",
-    "dynamicPropertyPathList": [
-        {"key": "primaryKeys"},
-        {"key": "onItemClick"}
-    ],
-    "displayName": "List",
-    "bottomRow": 199,
-    "parentRowSpace": 10,
-    "hideCard": false,
-    "mobileRightColumn": 32,
-    "mainContainerId": "6b8tfeab3z",
-    "primaryKeys": "{{List_bets.listData.map((currentItem, currentIndex) =>currentItem[\"index\"])}}",
-    "parentColumnSpace": 6.84375,
-    "dynamicTriggerPathList": [{"key": "onItemClick"}],
-    "gridType": "vertical",
-    "defaultSelectedItem": "{{appsmith.store.defaultSelectedItem}}",
-    "key": "sahbr5cq7k",
-    "backgroundColor": "transparent",
-    "isDeprecated": false,
-    "rightColumn": 64,
-    "widgetId": "ngzqa56zrj",
-    "minWidth": 450,
-    "onItemClick": "",
-    "parentId": "y5dhcclt68",
-    "renderMode": "CANVAS",
-    "mobileTopRow": 116,
-    "responsiveBehavior": "fill",
-    "originalTopRow": 6,
-    "mobileLeftColumn": 8,
-    "selectedItemView": "{{{}}}"
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "additionalStaticProps": [
+    "level",
+    "levelData",
+    "prefixMetaWidgetId",
+    "metaWidgetId"
+  ],
+  "animateLoading": true,
+  "backgroundColor": "transparent",
+  "borderRadius": "0.375rem",
+  "bottomRow": 199,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "children": [
+    {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "bottomRow": 1950,
+      "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+      "canExtend": false,
+      "containerStyle": "none",
+      "detachFromLayout": true,
+      "displayName": "Canvas",
+      "dropDisabled": true,
+      "dynamicBindingPathList": [
+        {
+          "key": "borderRadius"
+        },
+        {
+          "key": "boxShadow"
+        }
+      ],
+      "dynamicHeight": "AUTO_HEIGHT",
+      "flexLayers": [],
+      "hideCard": true,
+      "isDeprecated": false,
+      "isLoading": false,
+      "isVisible": true,
+      "key": "ym15ft1578",
+      "leftColumn": 0,
+      "maxDynamicHeight": 9000,
+      "minDynamicHeight": 4,
+      "minHeight": 400,
+      "minWidth": 450,
+      "mobileBottomRow": 400,
+      "mobileLeftColumn": 0,
+      "mobileRightColumn": 164.25,
+      "mobileTopRow": 0,
+      "needsErrorInfo": false,
+      "noPad": true,
+      "openParentPropertyPane": true,
+      "parentColumnSpace": 1,
+      "parentId": "ngzqa56zrj",
+      "parentRowSpace": 1,
+      "renderMode": "CANVAS",
+      "responsiveBehavior": "fill",
+      "rightColumn": 164.25,
+      "topRow": 0,
+      "type": "CANVAS_WIDGET",
+      "version": 1,
+      "widgetId": "707puwbkdc",
+      "widgetName": "Canvas1Copy"
+    }
+  ],
+  "currentItemsView": "{{[]}}",
+  "defaultSelectedItem": "{{appsmith.store.defaultSelectedItem}}",
+  "displayName": "List",
+  "dynamicBindingPathList": [
+    {
+      "key": "currentItemsView"
+    },
+    {
+      "key": "selectedItemView"
+    },
+    {
+      "key": "triggeredItemView"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "listData"
+    },
+    {
+      "key": "primaryKeys"
+    },
+    {
+      "key": "defaultSelectedItem"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "primaryKeys"
+    },
+    {
+      "key": "onItemClick"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onItemClick"
+    }
+  ],
+  "enhancements": true,
+  "flexVerticalAlignment": "start",
+  "gridType": "vertical",
+  "hasMetaWidgets": true,
+  "hideCard": false,
+  "iconSVG": "https://appcdn.appsmith.com/static/media/icon.5c9511142b3624c7491c5442e8ccd0ef.svg",
+  "isCanvas": true,
+  "isDeprecated": false,
+  "isLoading": false,
+  "isVisible": true,
+  "itemBackgroundColor": "#FFFFFF",
+  "itemSpacing": "8",
+  "key": "sahbr5cq7k",
+  "leftColumn": 0,
+  "listData": "{{utils.getPredictionsForModal()}}",
+  "mainCanvasId": "707puwbkdc",
+  "mainContainerId": "6b8tfeab3z",
+  "minWidth": 450,
+  "mobileBottomRow": 156,
+  "mobileLeftColumn": 8,
+  "mobileRightColumn": 32,
+  "mobileTopRow": 116,
+  "needsErrorInfo": false,
+  "onItemClick": "",
+  "originalBottomRow": 201,
+  "originalTopRow": 6,
+  "pageSize": 10,
+  "parentColumnSpace": 6.84375,
+  "parentId": "y5dhcclt68",
+  "parentRowSpace": 10,
+  "primaryKeys": "{{List_bets.listData.map((currentItem, currentIndex) =>currentItem[\"index\"])}}",
+  "renderMode": "CANVAS",
+  "requiresFlatWidgetChildren": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "selectedItemView": "{{{}}}",
+  "serverSidePagination": false,
+  "tags": [
+    "Suggested",
+    "Display"
+  ],
+  "templateHeight": 160,
+  "topRow": 4,
+  "triggeredItemView": "{{{}}}",
+  "type": "LIST_WIDGET_V2",
+  "widgetId": "ngzqa56zrj",
+  "widgetName": "List_bets"
 }

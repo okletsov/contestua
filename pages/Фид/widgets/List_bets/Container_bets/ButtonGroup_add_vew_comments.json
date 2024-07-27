@@ -1,122 +1,146 @@
 {
-    "needsErrorInfo": false,
-    "boxShadow": "none",
-    "mobileBottomRow": 18,
-    "widgetName": "ButtonGroup_add_vew_comments",
-    "isCanvas": false,
-    "dynamicPropertyPathList": [
-        {"key": "groupButtons.groupButton1.isDisabled"},
-        {"key": "groupButtons.groupButton2.isVisible"},
-        {"key": "groupButtons.groupButton3.isDisabled"}
-    ],
-    "displayName": "Button Group",
-    "iconSVG": "https://appcdn.appsmith.com/static/media/icon.bb8db4853027d74a78963c3375841e4b.svg",
-    "searchTags": [
-        "click",
-        "submit"
-    ],
-    "topRow": 13,
-    "bottomRow": 17,
-    "parentRowSpace": 10,
-    "type": "BUTTON_GROUP_WIDGET",
-    "groupButtons": {
-        "groupButton3": {
-            "onClick": "{{showModal('Modal_view_comments');\nstoreValue('selectedPredictionData', currentItem);\ncomments_for_prediction.run();\nstoreValue(currentItem.id + '_commentsCount', appsmith.store[currentItem.id + '_commentsCount'] === undefined ? currentItem.comments : appsmith.store[currentItem.id + '_commentsCount']);}}",
-            "buttonType": "SIMPLE",
-            "iconName": "eye-open",
-            "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-            "widgetId": "",
-            "menuItems": {
-                "menuItem1": {
-                    "backgroundColor": "#FFFFFF",
-                    "onClick": "",
-                    "widgetId": "",
-                    "index": 0,
-                    "label": "First Option",
-                    "id": "menuItem1",
-                    "isVisible": true,
-                    "isDisabled": false
-                },
-                "menuItem3": {
-                    "backgroundColor": "#DD4B34",
-                    "onClick": "",
-                    "iconName": "trash",
-                    "widgetId": "",
-                    "iconColor": "#FFFFFF",
-                    "iconAlign": "right",
-                    "index": 2,
-                    "label": "Delete",
-                    "id": "menuItem3",
-                    "isVisible": true,
-                    "isDisabled": false,
-                    "textColor": "#FFFFFF"
-                },
-                "menuItem2": {
-                    "backgroundColor": "#FFFFFF",
-                    "onClick": "",
-                    "widgetId": "",
-                    "index": 1,
-                    "label": "Second Option",
-                    "id": "menuItem2",
-                    "isVisible": true,
-                    "isDisabled": false
-                }
-            },
-            "index": 0,
-            "label": "View",
-            "id": "groupButton3",
-            "placement": "CENTER",
-            "isVisible": true,
-            "isDisabled": "{{appsmith.store[currentItem.id + '_commentsCount'] > 0 || currentItem.comments > 0 ? false : true}}"
-        },
-        "groupButton2": {
-            "onClick": "{{showModal('Modal_add_comment');\nstoreValue('selectedPredictionData', currentItem);\nstoreValue(currentItem.id + '_commentsCount', appsmith.store[currentItem.id + '_commentsCount'] === undefined ? currentItem.comments : appsmith.store[currentItem.id + '_commentsCount']);}}",
-            "buttonType": "SIMPLE",
-            "iconName": "add",
-            "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-            "widgetId": "",
-            "menuItems": {},
-            "index": 1,
-            "label": "Add",
-            "id": "groupButton2",
-            "placement": "CENTER",
-            "isVisible": "true",
-            "isDisabled": false
-        }
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 17,
+  "boxShadow": "none",
+  "buttonVariant": "PRIMARY",
+  "childStylesheet": {
+    "button": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "displayName": "Button Group",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
     },
-    "hideCard": false,
-    "mobileRightColumn": 44,
-    "animateLoading": true,
-    "parentColumnSpace": 6.40625,
-    "dynamicTriggerPathList": [
-        {"key": "groupButtons.groupButton3.onClick"},
-        {"key": "groupButtons.groupButton2.onClick"}
-    ],
-    "leftColumn": 33,
-    "dynamicBindingPathList": [
-        {"key": "borderRadius"},
-        {"key": "groupButtons.groupButton2.buttonColor"},
-        {"key": "groupButtons.groupButton3.buttonColor"},
-        {"key": "groupButtons.groupButton3.isDisabled"}
-    ],
-    "isDisabled": false,
-    "key": "w158dh8u6g",
-    "orientation": "horizontal",
-    "isDeprecated": false,
-    "rightColumn": 64,
-    "dynamicHeight": "FIXED",
-    "widgetId": "ai9vhvavlr",
-    "minWidth": 450,
-    "isVisible": true,
-    "version": 1,
-    "parentId": "wcibibbq6t",
-    "tags": ["Buttons"],
-    "renderMode": "CANVAS",
-    "isLoading": false,
-    "mobileTopRow": 14,
-    "responsiveBehavior": "fill",
-    "childStylesheet": {"button": {"buttonColor": "{{appsmith.theme.colors.primaryColor}}"}},
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "mobileLeftColumn": 20,
-    "buttonVariant": "PRIMARY"
+    {
+      "key": "groupButtons.groupButton2.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton3.buttonColor"
+    },
+    {
+      "key": "groupButtons.groupButton3.isDisabled"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "groupButtons.groupButton1.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButton2.isVisible"
+    },
+    {
+      "key": "groupButtons.groupButton3.isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "groupButtons.groupButton3.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.onClick"
+    }
+  ],
+  "groupButtons": {
+    "groupButton2": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "iconName": "add",
+      "id": "groupButton2",
+      "index": 1,
+      "isDisabled": false,
+      "isVisible": "true",
+      "label": "Add",
+      "menuItems": {},
+      "onClick": "{{showModal('Modal_add_comment');\nstoreValue('selectedPredictionData', currentItem);\nstoreValue(currentItem.id + '_commentsCount', appsmith.store[currentItem.id + '_commentsCount'] === undefined ? currentItem.comments : appsmith.store[currentItem.id + '_commentsCount']);}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    },
+    "groupButton3": {
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "buttonType": "SIMPLE",
+      "iconName": "eye-open",
+      "id": "groupButton3",
+      "index": 0,
+      "isDisabled": "{{appsmith.store[currentItem.id + '_commentsCount'] > 0 || currentItem.comments > 0 ? false : true}}",
+      "isVisible": true,
+      "label": "View",
+      "menuItems": {
+        "menuItem1": {
+          "backgroundColor": "#FFFFFF",
+          "id": "menuItem1",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "First Option",
+          "onClick": "",
+          "widgetId": ""
+        },
+        "menuItem2": {
+          "backgroundColor": "#FFFFFF",
+          "id": "menuItem2",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Second Option",
+          "onClick": "",
+          "widgetId": ""
+        },
+        "menuItem3": {
+          "backgroundColor": "#DD4B34",
+          "iconAlign": "right",
+          "iconColor": "#FFFFFF",
+          "iconName": "trash",
+          "id": "menuItem3",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Delete",
+          "onClick": "",
+          "textColor": "#FFFFFF",
+          "widgetId": ""
+        }
+      },
+      "onClick": "{{showModal('Modal_view_comments');\nstoreValue('selectedPredictionData', currentItem);\ncomments_for_prediction.run();\nstoreValue(currentItem.id + '_commentsCount', appsmith.store[currentItem.id + '_commentsCount'] === undefined ? currentItem.comments : appsmith.store[currentItem.id + '_commentsCount']);}}",
+      "placement": "CENTER",
+      "widgetId": ""
+    }
+  },
+  "hideCard": false,
+  "iconSVG": "https://appcdn.appsmith.com/static/media/icon.bb8db4853027d74a78963c3375841e4b.svg",
+  "isCanvas": false,
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "w158dh8u6g",
+  "leftColumn": 33,
+  "minWidth": 450,
+  "mobileBottomRow": 18,
+  "mobileLeftColumn": 20,
+  "mobileRightColumn": 44,
+  "mobileTopRow": 14,
+  "needsErrorInfo": false,
+  "orientation": "horizontal",
+  "parentColumnSpace": 6.40625,
+  "parentId": "wcibibbq6t",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "tags": [
+    "Buttons"
+  ],
+  "topRow": 13,
+  "type": "BUTTON_GROUP_WIDGET",
+  "version": 1,
+  "widgetId": "ai9vhvavlr",
+  "widgetName": "ButtonGroup_add_vew_comments"
 }

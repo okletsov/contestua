@@ -1,15 +1,11 @@
 {
+  "gitSyncId": "661eca10b7e3352fe43e8a8c_8d99471d-bc24-45d2-a310-822110a26a1c",
+  "id": "Финансы_utils",
   "unpublishedCollection": {
     "name": "utils",
     "pageId": "Финансы",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "actions": [],
-    "archivedActions": [],
-    "variables": [],
-    "userPermissions": []
-  },
-  "id": "Финансы_utils",
-  "deleted": false,
-  "gitSyncId": "661eca10b7e3352fe43e8a8c_8d99471d-bc24-45d2-a310-822110a26a1c"
+    "variables": []
+  }
 }

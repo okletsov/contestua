@@ -1,54 +1,70 @@
 {
-    "resetFormOnClick": false,
-    "needsErrorInfo": false,
-    "boxShadow": "none",
-    "mobileBottomRow": 22,
-    "widgetName": "Button_submitAC",
-    "onClick": "{{add_comment.run().then(() => {\n  showAlert('Comment added', 'success');\n  storeValue(appsmith.store.selectedPredictionData.id + '_commentsCount', appsmith.store[appsmith.store.selectedPredictionData.id + '_commentsCount'] + 1);\n  resetWidget(\"ButtonGroup_add_vew_comments\", true);\n  resetWidget(\"Text_number_of_comments\", true);\n}).catch(() => {\n  showAlert('Error', 'error');\n});\ncloseModal('Modal_add_comment');}}",
-    "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "dynamicPropertyPathList": [{"key": "isDisabled"}],
-    "displayName": "Button",
-    "iconSVG": "https://appcdn.appsmith.com/static/media/icon.05d209fafeb13a8569e3b4e97069d9ee.svg",
-    "searchTags": [
-        "click",
-        "submit"
-    ],
-    "topRow": 30,
-    "bottomRow": 34,
-    "type": "BUTTON_WIDGET",
-    "hideCard": false,
-    "mobileRightColumn": 63,
-    "animateLoading": true,
-    "dynamicTriggerPathList": [{"key": "onClick"}],
-    "leftColumn": 47,
-    "dynamicBindingPathList": [
-        {"key": "buttonColor"},
-        {"key": "borderRadius"},
-        {"key": "isDisabled"}
-    ],
-    "text": "Add",
-    "isDisabled": "{{Select_comment_author.isValid && RichTextEditor_comment.text.length > 0 ? false : true}}",
-    "key": "axog1yo9um",
-    "isDeprecated": false,
-    "rightColumn": 63,
-    "isDefaultClickDisabled": true,
-    "widgetId": "fz2nqvakur",
-    "buttonStyle": "PRIMARY_BUTTON",
-    "minWidth": 120,
-    "isVisible": true,
-    "recaptchaType": "V3",
-    "version": 1,
-    "parentId": "ydznf7ssd3",
-    "tags": ["Buttons"],
-    "renderMode": "CANVAS",
-    "isLoading": false,
-    "mobileTopRow": 18,
-    "responsiveBehavior": "hug",
-    "originalTopRow": 30,
-    "disabledWhenInvalid": false,
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "mobileLeftColumn": 47,
-    "originalBottomRow": 34,
-    "buttonVariant": "PRIMARY",
-    "placement": "CENTER"
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 34,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
+  "disabledWhenInvalid": false,
+  "displayName": "Button",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "https://appcdn.appsmith.com/static/media/icon.05d209fafeb13a8569e3b4e97069d9ee.svg",
+  "isDefaultClickDisabled": true,
+  "isDeprecated": false,
+  "isDisabled": "{{Select_comment_author.isValid && RichTextEditor_comment.text.length > 0 ? false : true}}",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "axog1yo9um",
+  "leftColumn": 47,
+  "minWidth": 120,
+  "mobileBottomRow": 22,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 18,
+  "needsErrorInfo": false,
+  "onClick": "{{add_comment.run().then(() => {\n  showAlert('Comment added', 'success');\n  storeValue(appsmith.store.selectedPredictionData.id + '_commentsCount', appsmith.store[appsmith.store.selectedPredictionData.id + '_commentsCount'] + 1);\n  resetWidget(\"ButtonGroup_add_vew_comments\", true);\n  resetWidget(\"Text_number_of_comments\", true);\n}).catch(() => {\n  showAlert('Error', 'error');\n});\ncloseModal('Modal_add_comment');}}",
+  "originalBottomRow": 34,
+  "originalTopRow": 30,
+  "parentId": "ydznf7ssd3",
+  "placement": "CENTER",
+  "recaptchaType": "V3",
+  "renderMode": "CANVAS",
+  "resetFormOnClick": false,
+  "responsiveBehavior": "hug",
+  "rightColumn": 63,
+  "searchTags": [
+    "click",
+    "submit"
+  ],
+  "tags": [
+    "Buttons"
+  ],
+  "text": "Add",
+  "topRow": 30,
+  "type": "BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "fz2nqvakur",
+  "widgetName": "Button_submitAC"
 }

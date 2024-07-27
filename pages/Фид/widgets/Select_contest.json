@@ -1,66 +1,84 @@
 {
-    "boxShadow": "none",
-    "iconSVG": "/static/media/icon.a62f1265827a5af78966a733a05697db.svg",
-    "labelText": "Конкурс",
-    "topRow": 0,
-    "labelWidth": 5,
-    "type": "SELECT_WIDGET",
-    "serverSideFiltering": false,
-    "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( '{\"label\": \"' + contests_numbered.data[0].label + '\", \"value\": \"' + contests_numbered.data[0].id + '\"}'))(Select_contest.options, Select_contest.serverSideFiltering) }}",
-    "animateLoading": true,
-    "leftColumn": 0,
-    "dynamicBindingPathList": [
-        {"key": "accentColor"},
-        {"key": "borderRadius"},
-        {"key": "sourceData"},
-        {"key": "defaultOptionValue"}
-    ],
-    "labelStyle": "BOLD",
-    "placeholderText": "Выберите конкурс",
-    "isDisabled": false,
-    "isRequired": true,
-    "dynamicHeight": "FIXED",
-    "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-    "isVisible": true,
-    "version": 1,
-    "tags": [
-        "Suggested",
-        "Select"
-    ],
-    "isLoading": false,
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "needsErrorInfo": false,
-    "mobileBottomRow": 7,
-    "widgetName": "Select_contest",
-    "isFilterable": false,
-    "dynamicPropertyPathList": [{"key": "sourceData"}],
-    "displayName": "Select",
-    "searchTags": ["dropdown"],
-    "bottomRow": 7,
-    "parentRowSpace": 10,
-    "hideCard": false,
-    "mobileRightColumn": 20,
-    "parentColumnSpace": 14.234375,
-    "dynamicTriggerPathList": [{"key": "onOptionChange"}],
-    "labelPosition": "Top",
-    "labelTextColor": "#f4f4f5",
-    "sourceData": "{{contests_numbered.data.map( (obj) =>{ return  {'label': obj.label, 'value': obj.id } })}}",
-    "key": "kxygzppish",
-    "labelTextSize": "0.875rem",
-    "isDeprecated": false,
-    "rightColumn": 32,
-    "thumbnailSVG": "https://appcdn.appsmith.com/static/media/thumbnail.9aef24cb159e9c6e4d0f1d7ca4fb0c79.svg",
-    "widgetId": "9whg4kz2f5",
-    "optionValue": "value",
-    "minWidth": 450,
-    "parentId": "0",
-    "labelAlignment": "left",
-    "renderMode": "CANVAS",
-    "mobileTopRow": 0,
-    "optionLabel": "label",
-    "responsiveBehavior": "fill",
-    "mobileLeftColumn": 0,
-    "maxDynamicHeight": 9000,
-    "onOptionChange": "{{participants_in_contest.run().then(() => {\n  finished_bets.run();\n});}}",
-    "minDynamicHeight": 4
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 7,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( '{\"label\": \"' + contests_numbered.data[0].label + '\", \"value\": \"' + contests_numbered.data[0].id + '\"}'))(Select_contest.options, Select_contest.serverSideFiltering) }}",
+  "displayName": "Select",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.a62f1265827a5af78966a733a05697db.svg",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isFilterable": false,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "kxygzppish",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "Конкурс",
+  "labelTextColor": "#f4f4f5",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 7,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 20,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{participants_in_contest.run().then(() => {\n  finished_bets.run();\n});}}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 14.234375,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "Выберите конкурс",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 32,
+  "searchTags": [
+    "dropdown"
+  ],
+  "serverSideFiltering": false,
+  "sourceData": "{{contests_numbered.data.map( (obj) =>{ return  {'label': obj.label, 'value': obj.id } })}}",
+  "tags": [
+    "Suggested",
+    "Select"
+  ],
+  "thumbnailSVG": "https://appcdn.appsmith.com/static/media/thumbnail.9aef24cb159e9c6e4d0f1d7ca4fb0c79.svg",
+  "topRow": 0,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "9whg4kz2f5",
+  "widgetName": "Select_contest"
 }
