@@ -31,7 +31,7 @@
   "iconSVG": "https://appcdn.appsmith.com/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
   "isDeprecated": false,
   "isLoading": false,
-  "isVisible": "{{cr_raw_ongoing.data.length === 0 ? true : false}}",
+  "isVisible": "{{cr_raw_ongoing.data.length === 0 && future_bets.data.length === 0 ? true : false}}",
   "key": "ts7k3l8f25",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
