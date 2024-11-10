@@ -23,7 +23,7 @@
   "isLoading": false,
   "isVisible": "{{currentItem.main_score === null ? false : true}}",
   "key": "7izeximiue",
-  "leftColumn": 37,
+  "leftColumn": 36,
   "minWidth": 450,
   "mobileBottomRow": 18,
   "mobileLeftColumn": 14,
@@ -36,7 +36,7 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 39,
+  "rightColumn": 38,
   "searchTags": [
     "line"
   ],

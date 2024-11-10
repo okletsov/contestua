@@ -40,7 +40,7 @@
   "isLoading": false,
   "isVisible": "{{currentItem.actual_result === 'not-played' ? false : true}}",
   "key": "taof8sgrxu",
-  "leftColumn": 39,
+  "leftColumn": 38,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -66,7 +66,7 @@
     "Suggested",
     "Content"
   ],
-  "text": "<span style=\"color:{{'#ffffffe6'}};\">{{currentItem.main_score}}</span>\n<span style=\"color:{{'#71717a'}}; font-size:9.5px;\">{{currentItem.detailed_score}} </span>",
+  "text": "<span style=\"color:{{'#ffffffe6'}}; font-size:12px;\">{{currentItem.main_score}}</span>\n<span style=\"color:{{'#71717a'}}; font-size:9.5px;\">{{currentItem.detailed_score}} </span>",
   "textAlign": "CENTER",
   "textColor": "rgba(255, 255, 255, 0.9)",
   "topRow": 4,
