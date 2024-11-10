@@ -2,7 +2,7 @@
   "animateLoading": true,
   "backgroundColor": "",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 11,
+  "bottomRow": 12,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -66,13 +66,13 @@
     "Suggested",
     "Content"
   ],
-  "text": "{{currentItem.main_score}}",
+  "text": "<span style=\"color:{{'#ffffffe6'}};\">{{currentItem.main_score}}</span>\n<span style=\"color:{{'#71717a'}}; font-size:9.5px;\">{{currentItem.detailed_score}} </span>",
   "textAlign": "CENTER",
   "textColor": "rgba(255, 255, 255, 0.9)",
-  "topRow": 5,
+  "topRow": 4,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
   "widgetId": "z2kgcdz3he",
-  "widgetName": "Text_main_score"
+  "widgetName": "Text_score"
 }
