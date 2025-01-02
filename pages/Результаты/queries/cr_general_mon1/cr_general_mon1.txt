@@ -17,4 +17,5 @@ where un.is_active = 1
 		from seasonal_x_monthly_contest sxmc
 		where sxmc.seasonal_contest_id = '{{Select_contest.selectedOptionValue}}'
 			and sxmc.month = 1
-	);
+	)
+	order by cg.place;

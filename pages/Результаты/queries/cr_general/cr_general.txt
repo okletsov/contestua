@@ -10,4 +10,5 @@ SELECT
 from cr_general cg
 	join user_nickname un on un.user_id = cg.user_id
 where un.is_active = 1
-	and contest_id = '{{Select_contest.selectedOptionValue}}';
+	and contest_id = '{{Select_contest.selectedOptionValue}}'
+	order by cg.place;

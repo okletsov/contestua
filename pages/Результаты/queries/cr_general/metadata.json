@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n\tcg.place\n\t, un.nickname\n\t, cg.final_bets_count\n\t, cg.active_days\n\t, cg.won\n\t, cg.lost\n\t, cg.units\n\t, cg.roi\nfrom cr_general cg\n\tjoin user_nickname un on un.user_id = cg.user_id\nwhere un.is_active = 1\n\tand contest_id = '{{Select_contest.selectedOptionValue}}';",
+      "body": "SELECT \n\tcg.place\n\t, un.nickname\n\t, cg.final_bets_count\n\t, cg.active_days\n\t, cg.won\n\t, cg.lost\n\t, cg.units\n\t, cg.roi\nfrom cr_general cg\n\tjoin user_nickname un on un.user_id = cg.user_id\nwhere un.is_active = 1\n\tand contest_id = '{{Select_contest.selectedOptionValue}}'\n\torder by cg.place;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
