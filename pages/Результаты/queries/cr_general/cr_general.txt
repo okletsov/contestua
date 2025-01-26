@@ -1,5 +1,12 @@
 SELECT 
-	cg.place
+	case
+		when cg.place = 0 then (
+			SELECT count(uscp.id) 
+			from user_seasonal_contest_participation uscp
+			where uscp.contest_id = '{{Select_contest.selectedOptionValue}}'
+		)
+		else cg.place
+	end as place
 	, un.nickname
 	, cg.final_bets_count
 	, cg.active_days
@@ -11,4 +18,4 @@ from cr_general cg
 	join user_nickname un on un.user_id = cg.user_id
 where un.is_active = 1
 	and contest_id = '{{Select_contest.selectedOptionValue}}'
-	order by cg.place;
+order by place;
