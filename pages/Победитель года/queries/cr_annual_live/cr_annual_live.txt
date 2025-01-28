@@ -1,0 +1,70 @@
+select
+    row_number() over (
+order by
+    `t2`.`total_points` desc) AS `place`,
+    `t2`.`nickname` AS `nickname`,
+    `t2`.`units` AS `units`,
+    `t2`.`roi` AS `roi`,
+    `t2`.`current_contest_place` AS `current_contest_place`,
+    `t2`.`current_contest_points` AS `current_contest_points`,
+    `t2`.`prior_contests_points` AS `prior_contests_points`,
+    `t2`.`total_points` AS `total_points`
+from
+    (
+	select
+	        `t1`.`nickname` AS `nickname`,
+	        sum(`t1`.`units`) AS `units`,
+	        sum(`t1`.`roi`) AS `roi`,
+	        sum(`t1`.`place`) AS `current_contest_place`,
+	        sum(`t1`.`current_contest_points`) AS `current_contest_points`,
+	        sum(`t1`.`new_points`) AS `prior_contests_points`,
+	        sum(case when `t1`.`current_contest_points` is null then 0 else `t1`.`current_contest_points` end) + sum(case when `t1`.`new_points` is null then 0 else `t1`.`new_points` end) AS `total_points`
+	    from
+	        (
+		select
+		    `uscp`.`user_id` AS `user_id`,
+		    `un`.`nickname` AS `nickname`,
+		    case
+		        when `cg`.`place` > 2 then `ppc`.`participants` - `cg`.`place` + 1
+		        when `cg`.`place` = 2 then `ppc`.`participants` - `cg`.`place` + 2
+		        when `cg`.`place` = 1 then `ppc`.`participants` - `cg`.`place` + 3
+		        when `cg`.`place` = 0 then 1
+		    end AS `new_points`,
+		    case
+		        when `cro`.`place` > 2 then `ppc`.`participants` - `cro`.`place` + 1
+		        when `cro`.`place` = 2 then `ppc`.`participants` - `cro`.`place` + 2
+		        when `cro`.`place` = 1 then `ppc`.`participants` - `cro`.`place` + 3
+		        when `cro`.`place` = 0 then 1
+		    end AS `current_contest_points`,
+		    `cro`.`place` AS `place`,
+		    `cro`.`units` AS `units`,
+		    `cro`.`roi` AS `roi`,
+		    `ppc`.`participants` AS `participants`
+		from
+		    ((((`user_seasonal_contest_participation` `uscp`)
+		join `user_nickname` `un` on
+		    (`un`.`user_id` = `uscp`.`user_id`))
+		join `participants_per_contest` `ppc` on
+		    (`ppc`.`id` = `uscp`.`contest_id`))
+		left join `cr_general` `cg` on
+		    (`cg`.`user_id` = `uscp`.`user_id`
+		        and `cg`.`contest_id` = `uscp`.`contest_id`
+		        )
+		left join `cr_raw_ongoing` `cro` on
+		    (`cro`.`user_id` = `uscp`.`user_id`
+		        and `cro`.`seasonal_contest_id` = `uscp`.`contest_id`
+		        ))
+		where
+		     `un`.`is_active` = 1
+		     and uscp.contest_id in (
+		     	SELECT 
+		     		axsc.seasonal_contest_id
+		     	from annual_x_seasonal_contest axsc
+		     		join contest c on c.id = axsc.seasonal_contest_id
+		     	where c.`year` = {{Select_contest.selectedOptionValue}}
+		     )
+		order by
+		    `un`.`nickname`
+		) t1
+	group by t1.user_id
+) t2

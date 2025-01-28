@@ -70,7 +70,7 @@
     "dropdown"
   ],
   "serverSideFiltering": false,
-  "sourceData": "{{annual_contests_with_results.data.map( (obj) =>{ return  {'label': obj.label, 'value': obj.id } })}}",
+  "sourceData": "{{annual_contests_with_results.data.map( (obj) =>{ return  {'label': obj.label, 'value': obj.id, 'is_active': obj.is_active } })}}",
   "tags": [
     "Suggested",
     "Select"

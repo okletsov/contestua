@@ -1,11 +1,13 @@
 SELECT 
 	t1.id
 	, t1.label
+	, t1.is_active
 from (
 	SELECT 
 		c.`year` as id
 	    , concat(c.`year`, '-', (c.`year` + 1)) as label 
 	    , count(cg.contest_id) as seasonal_results
+			, c.is_active
 	from contest c
 		join annual_x_seasonal_contest axsc on c.id = axsc.annual_contest_id
 		join cr_general cg on cg.contest_id = axsc.seasonal_contest_id 

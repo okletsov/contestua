@@ -5,7 +5,7 @@
   "borderWidth": "0",
   "bottomRow": 129,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
-  "defaultModel": "{{utils.customWidgetData()}}",
+  "defaultModel": "{{utils.priorContestsData()}}",
   "displayName": "Custom",
   "dynamicBindingPathList": [
     {
@@ -16,9 +16,17 @@
     },
     {
       "key": "defaultModel"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onResetClick"
@@ -33,7 +41,7 @@
   "isDeprecated": false,
   "isLoading": false,
   "isSearchWildcard": true,
-  "isVisible": true,
+  "isVisible": "{{annual_contests_with_results.data.find(item => item.id === Select_contest.selectedOptionValue)?.is_active === 1 ? false : true}}",
   "key": "krvw8yv6jy",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
@@ -72,5 +80,5 @@
   },
   "version": 1,
   "widgetId": "v2j2lfwpv0",
-  "widgetName": "Custom1"
+  "widgetName": "Custom_finished_contests"
 }

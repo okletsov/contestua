@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n\tt1.id\n\t, t1.label\nfrom (\n\tSELECT \n\t\tc.`year` as id\n\t    , concat(c.`year`, '-', (c.`year` + 1)) as label \n\t    , count(cg.contest_id) as seasonal_results\n\tfrom contest c\n\t\tjoin annual_x_seasonal_contest axsc on c.id = axsc.annual_contest_id\n\t\tjoin cr_general cg on cg.contest_id = axsc.seasonal_contest_id \n\twhere c.`type` = 'annual'\n\tgroup by axsc.annual_contest_id \n\torder by c.`year` desc\n) t1\nwhere t1.seasonal_results > 1;",
+      "body": "SELECT \n\tt1.id\n\t, t1.label\n\t, t1.is_active\nfrom (\n\tSELECT \n\t\tc.`year` as id\n\t    , concat(c.`year`, '-', (c.`year` + 1)) as label \n\t    , count(cg.contest_id) as seasonal_results\n\t\t\t, c.is_active\n\tfrom contest c\n\t\tjoin annual_x_seasonal_contest axsc on c.id = axsc.annual_contest_id\n\t\tjoin cr_general cg on cg.contest_id = axsc.seasonal_contest_id \n\twhere c.`type` = 'annual'\n\tgroup by axsc.annual_contest_id \n\torder by c.`year` desc\n) t1\nwhere t1.seasonal_results > 1;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

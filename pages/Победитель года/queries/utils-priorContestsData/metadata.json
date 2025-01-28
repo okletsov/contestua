@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "661eca10b7e3352fe43e8a8c_bc31a456-f422-41d0-b2df-fb0baa93644b",
-  "id": "Победитель года_utils.customWidgetData",
+  "gitSyncId": "661eca10b7e3352fe43e8a8c_a32c31fe-ec23-4c66-b7fe-7915ecd584ad",
+  "id": "Победитель года_utils.priorContestsData",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -23,8 +23,8 @@
       }
     ],
     "executeOnLoad": false,
-    "fullyQualifiedName": "utils.customWidgetData",
-    "name": "customWidgetData",
+    "fullyQualifiedName": "utils.priorContestsData",
+    "name": "priorContestsData",
     "pageId": "Победитель года",
     "userSetOnLoad": false
   }
