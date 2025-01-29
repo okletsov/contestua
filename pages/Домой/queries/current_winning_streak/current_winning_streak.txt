@@ -1,0 +1,1 @@
+SELECT * FROM web_current_winning_streak;

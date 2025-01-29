@@ -54,6 +54,7 @@ export default {
 			"crRawOngoing": cr_raw_ongoing.data,
 			"crRawOngoing2ndMonth": cr_raw_ongoing_2nd_month.data,
 			"crWinningStreak": cr_winning_streak.data,
+			"currentWinningStreak": current_winning_streak.data,
 			"crBiggestOdd": cr_biggest_odd.data,
 			"dopStavki": dop_stavki.data
 		}
