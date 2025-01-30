@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * from web_cr_winning_strick;",
+      "body": "SELECT place, nickname, strick_avg_odds, strick_length from web_cr_winning_strick;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

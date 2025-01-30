@@ -1,1 +1,1 @@
-SELECT * from web_cr_winning_strick;
+SELECT place, nickname, strick_avg_odds, strick_length from web_cr_winning_strick;
