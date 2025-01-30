@@ -9,7 +9,7 @@
   "animateLoading": true,
   "backgroundColor": "transparent",
   "borderRadius": "0.375rem",
-  "bottomRow": 218,
+  "bottomRow": 223,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "children": [
     {
@@ -138,7 +138,7 @@
     "Display"
   ],
   "templateHeight": 160,
-  "topRow": 140,
+  "topRow": 145,
   "triggeredItemView": "{{{}}}",
   "type": "LIST_WIDGET_V2",
   "widgetId": "padqksw39i",
