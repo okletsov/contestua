@@ -49,7 +49,7 @@ from (
 				where c2.`type` = 'seasonal'
 					and c2.is_active = 1 
 			)
-		group by cf.user_id 
+		group by cf.user_id, un.nickname
 		order by un.nickname 
 	) t1
 ) t2;

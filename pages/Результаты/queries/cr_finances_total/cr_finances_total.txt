@@ -24,6 +24,8 @@ from (
 				from seasonal_x_monthly_contest sxmc
 				where sxmc.seasonal_contest_id = '{{Select_contest.selectedOptionValue}}'
 			))
-	group by cf.user_id
+	group by 
+		cf.user_id
+		, un.nickname
 ) t1 
 order by place;

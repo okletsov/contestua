@@ -43,5 +43,5 @@ from (
 				where c2.`type` = 'seasonal'
 					and c2.is_active = 1 
 			)
-	GROUP by cf.user_id 
+	GROUP by cf.user_id, un.nickname
 ) t1;
