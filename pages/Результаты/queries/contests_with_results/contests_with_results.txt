@@ -7,7 +7,6 @@ SELECT
         when `c`.`season` = 'Winter' then concat(`c`.`season`, ' ', right(`c`.`year`, 2), '-', right(`c`.`year`, 2) + 1)
         else concat(`c`.`season`, ' ', right(`c`.`year`, 2))
     end AS `label`
-    , c.start_date 
 from ( 
 	SELECT 
 		DISTINCT cg.contest_id 

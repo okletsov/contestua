@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT \n\tDISTINCT CASE \n\t\twhen t1.seasonal_contest_id is null then t1.contest_id\n\t\telse t1.seasonal_contest_id\n\tEND as contest_id\n\t, case\n        when `c`.`season` = 'Winter' then concat(`c`.`season`, ' ', right(`c`.`year`, 2), '-', right(`c`.`year`, 2) + 1)\n        else concat(`c`.`season`, ' ', right(`c`.`year`, 2))\n    end AS `label`\n    , c.start_date \nfrom ( \n\tSELECT \n\t\tDISTINCT cg.contest_id \n\t\t, (\n\t\t\tSELECT sxmc.seasonal_contest_id\n\t\t\tfrom seasonal_x_monthly_contest sxmc \n\t\t\twhere sxmc.monthly_contest_id = cg.contest_id \n\t\t) as seasonal_contest_id\n\tfrom cr_general cg\n) t1\n\tjoin contest c on c.id = t1.contest_id\norder by c.start_date desc;",
+      "body": "SELECT \n\tDISTINCT CASE \n\t\twhen t1.seasonal_contest_id is null then t1.contest_id\n\t\telse t1.seasonal_contest_id\n\tEND as contest_id\n\t, case\n        when `c`.`season` = 'Winter' then concat(`c`.`season`, ' ', right(`c`.`year`, 2), '-', right(`c`.`year`, 2) + 1)\n        else concat(`c`.`season`, ' ', right(`c`.`year`, 2))\n    end AS `label`\nfrom ( \n\tSELECT \n\t\tDISTINCT cg.contest_id \n\t\t, (\n\t\t\tSELECT sxmc.seasonal_contest_id\n\t\t\tfrom seasonal_x_monthly_contest sxmc \n\t\t\twhere sxmc.monthly_contest_id = cg.contest_id \n\t\t) as seasonal_contest_id\n\tfrom cr_general cg\n) t1\n\tjoin contest c on c.id = t1.contest_id\norder by c.start_date desc;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
