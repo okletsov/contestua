@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "backgroundColor": "#3a3936",
-  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderRadius": "1.5rem",
   "bottomRow": 1104,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
@@ -56,11 +56,7 @@
   ],
   "detachFromLayout": true,
   "displayName": "Modal",
-  "dynamicBindingPathList": [
-    {
-      "key": "borderRadius"
-    }
-  ],
+  "dynamicBindingPathList": [],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
