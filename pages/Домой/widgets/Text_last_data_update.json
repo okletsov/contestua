@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 5,
+  "bottomRow": 8,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -64,7 +64,7 @@
   "text": "Обновлено:\n{{ \n   (() => {\n      const date = new Date(last_data_update.data[0].runtime);\n      \n      const options = { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit', hour12: false };\n      const formattedDateTime = date.toLocaleString('en-US', options).replace(',', ',');\n      \n      return formattedDateTime;\n   })()\n}}",
   "textAlign": "CENTER",
   "textColor": "#71717a",
-  "topRow": 1,
+  "topRow": 4,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

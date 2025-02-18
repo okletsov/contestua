@@ -14,26 +14,29 @@
       "key": "borderRadius"
     },
     {
+      "key": "isVisible"
+    },
+    {
       "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicPropertyPathList": [
     {
-      "key": "fontSize"
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.75rem",
+  "fontSize": "1rem",
   "fontStyle": "BOLD",
   "hideCard": false,
   "iconSVG": "https://appcdn.appsmith.com/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
   "isDeprecated": false,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{last_allowed_bet.data.length > 0 ? true : false}}",
   "key": "ts7k3l8f25",
-  "leftColumn": 8,
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -41,15 +44,15 @@
   "mobileLeftColumn": 24,
   "mobileRightColumn": 40,
   "mobileTopRow": 58,
-  "originalBottomRow": 6,
-  "originalTopRow": 0,
+  "originalBottomRow": 237,
+  "originalTopRow": 233,
   "overflow": "NONE",
   "parentColumnSpace": 14.234375,
-  "parentId": "y5dhcclt68",
+  "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 51,
+  "rightColumn": 64,
   "searchTags": [
     "typography",
     "paragraph",
@@ -60,13 +63,13 @@
     "Suggested",
     "Content"
   ],
-  "text": "{{utils.getTitleForBetsModal()}}",
+  "text": "Конец {{last_allowed_bet.data[0].type === 'seasonal' ? '' : 'месячного ' }}конкурса: {{utils.formatDateTime(last_allowed_bet.data[0].end_date)}}  ",
   "textAlign": "CENTER",
-  "textColor": "rgba(255, 255, 255, 0.9)",
+  "textColor": "#eab308",
   "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "s106l0xv06",
-  "widgetName": "Text_bets_title"
+  "widgetId": "hz84eeobed",
+  "widgetName": "Text_last_allowed_bet_time"
 }

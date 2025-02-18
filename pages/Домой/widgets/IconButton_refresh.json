@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 5,
+  "bottomRow": 9,
   "boxShadow": "none",
   "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
   "buttonVariant": "PRIMARY",
@@ -39,7 +39,7 @@
   "mobileRightColumn": 4,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
-  "onClick": "{{cr_raw_ongoing.run().then(() => {});\ncr_biggest_odd.run();\ncr_winning_streak.run();\ncurrent_winning_streak.run();\nrecent_bets.run();\nfuture_bets.run();\nlive_bets.run();\ndop_stavki.run();\nlast_data_update.run();\ncr_raw_ongoing_2nd_month.run();\ncheck_rules.run();\nbets_with_recent_comments.run();}}",
+  "onClick": "{{cr_raw_ongoing.run().then(() => {});\ncr_biggest_odd.run();\ncr_winning_streak.run();\ncurrent_winning_streak.run();\nrecent_bets.run();\nfuture_bets.run();\nlive_bets.run();\ndop_stavki.run();\nlast_data_update.run();\ncr_raw_ongoing_2nd_month.run();\ncheck_rules.run();\nlast_allowed_bet.run();\nbets_with_recent_comments.run();}}",
   "parentColumnSpace": 14.234375,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -53,7 +53,7 @@
   "tags": [
     "Buttons"
   ],
-  "topRow": 0,
+  "topRow": 4,
   "type": "ICON_BUTTON_WIDGET",
   "version": 1,
   "widgetId": "3h1zsblpee",

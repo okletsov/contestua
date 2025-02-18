@@ -1,0 +1,9 @@
+SELECT 
+	c.type
+	, DATEDIFF(c.end_date, now()) as days_left
+	, c.end_date
+from contest c 
+where 1=1
+	and c.is_active = 1
+	and c.`type` in ('seasonal', 'monthly')
+	and DATEDIFF(c.end_date, now()) < 5;
