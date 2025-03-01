@@ -3,7 +3,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "0.375rem",
   "borderWidth": "0",
-  "bottomRow": 94,
+  "bottomRow": 96,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "defaultModel": "{{utils.customWidgetData()}}",
   "displayName": "Custom",
@@ -73,7 +73,7 @@
   ],
   "theme": "{{appsmith.theme}}",
   "thumbnailSVG": "https://appcdn.appsmith.com/static/media/thumbnail.a7d7cde44fad9a0d4d490def43560a78.svg",
-  "topRow": 16,
+  "topRow": 18,
   "type": "CUSTOM_WIDGET",
   "uncompiledSrcDoc": {
     "css": "/* Google fonts - Open Sans */\n@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:400,700);\n\n.app {\n\theight: calc(var(--appsmith-ui-height) * 1px);\n\twidth: calc(var(--appsmith-ui-width) * 1px);\n\tjustify-content: center;\n\tborder-radius: var(--appsmith-theme-borderRadius);\n\tbox-shadow: var(--appsmith-theme-boxShadow);\n}\n\ndiv {\n    color: rgba(255, 255, 255, 0.9);\n}\n\nbody {\n    background: #18181b;\n    font-family: \"Nunito Sans\", sans-serif;\n  }\n\ntable {\n\t\tborder-collapse: collapse;\n    font-weight: bold;\n}\n\ntable, th, td {\n    border: 0.5px solid black;\n}\n\nth {\n    background-color: #726f69;\n    height: 35px;\n    font-size: 12px;\n\t\tline-height: 1.2\n  }\n\ntd {\n    background: #3a3936;\n    font-size: 11px;\n    height: 25px;\n\t\tline-height: 1.2\n  }\n\ntd:not(.place-cellData,  .index-cellData) {\n\tpadding-left: 5px;\n}\n\na {\n    color: rgba(255, 255, 255, 0.9);\n}\n\na:hover {\n    color: rgba(209, 212, 199, 0.9); \n}\n\n.tableTitle {\n\ttext-align: center;\n\tfont-size: 12px;\n\tfont-weight: bold;\n\tpadding-top: 5px;\n\tpadding-bottom: 10px;\n}\n\n.winning-strick {\n    float: left;\n    padding-right: 30px;\n}\n\n.th-nickname {\n    min-width: 50px;\n}\n\n.th-contest {\n    width: 140px;\n}\n\n.biggest-odds {\n    width: 220px;\n}\n\n.place-cellData,  .index-cellData {\n    min-width: 15px;\n\t\ttext-align: center;\n}\n\n.five-contests-points {\n    max-width: 40px;\n  }\n\n.container {\n\tdisplay: flex;\n}\n\n.winning-streak-table {\n\twidth: 49%;\n}\n\n.current-streak-table {\n\twidth: 49%;\n\tmargin-left: auto;\n}\n\n.dop-stavki-table {\n\twidth: 49%;\n}\n\n.dop-stavki-description {\n\tmargin-top: 10px;\n\t// width: 46%;\n\tmargin-right: 2%;\n\tmargin-left: 2%;\n\ttext-align: justify;\n\tfont-size: 11px;\n\tfont-weight: bold;\n\tline-height: 1.5\n}\n\n.biggest-odd-table {\n\twidth: 49%;\n\tmargin-right: auto;\n}\n\n.strick_avg_odds {\n\tmax-width: 40px\n}\n",
