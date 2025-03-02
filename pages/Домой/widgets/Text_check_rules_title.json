@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 117,
+  "bottomRow": 124,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -47,8 +47,8 @@
   "mobileLeftColumn": 24,
   "mobileRightColumn": 40,
   "mobileTopRow": 58,
-  "originalBottomRow": 105,
-  "originalTopRow": 101,
+  "originalBottomRow": 117,
+  "originalTopRow": 113,
   "overflow": "NONE",
   "parentColumnSpace": 14.234375,
   "parentId": "0",
@@ -69,7 +69,7 @@
   "text": "Нарушения - {{check_rules.data.length}}\n",
   "textAlign": "CENTER",
   "textColor": "rgba(255, 255, 255, 0.9)",
-  "topRow": 113,
+  "topRow": 120,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
