@@ -60,8 +60,8 @@ from
 		     	SELECT 
 		     		axsc.seasonal_contest_id
 		     	from annual_x_seasonal_contest axsc
-		     		join contest c on c.id = axsc.seasonal_contest_id
-		     	where c.`year` = {{Select_contest.selectedOptionValue}}
+		     		join contest c on c.id = axsc.annual_contest_id
+		     	where c.is_active = 1
 		     )
 		order by
 		    `un`.`nickname`
