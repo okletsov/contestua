@@ -59,8 +59,8 @@
     "selectionColorCSSVar": "--ads-widget-focus"
   },
   "onClick": "{{storeValue('defaultSelectedItem', '1');\nshowModal('Modal_bets');\nstoreValue('parentButton', 'bets_with_recent_comments');}}",
-  "originalBottomRow": 21,
-  "originalTopRow": 16,
+  "originalBottomRow": 20,
+  "originalTopRow": 15,
   "parentColumnSpace": 14.234375,
   "parentId": "0",
   "parentRowSpace": 10,
