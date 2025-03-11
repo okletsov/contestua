@@ -62,6 +62,10 @@
     {
       "id": "Финансы",
       "isDefault": false
+    },
+    {
+      "id": "Аналитика",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {

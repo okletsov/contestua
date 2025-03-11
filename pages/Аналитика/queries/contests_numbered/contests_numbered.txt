@@ -1,0 +1,9 @@
+SELECT 
+	cn.id
+	, cn.label
+FROM contests_numbered cn
+	join user_seasonal_contest_participation uscp on uscp.contest_id = cn.id
+where uscp.user_id = '{{Select_participant.selectedOptionValue}}'
+order by 
+	case when is_active = 1 then 0 else 1 end
+	, contest_number asc;

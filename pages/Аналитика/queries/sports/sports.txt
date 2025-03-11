@@ -1,0 +1,4 @@
+SELECT 
+	distinct p.sport
+from prediction p
+	where p.user_id = {{Select_participant.selectedOptionValue}};

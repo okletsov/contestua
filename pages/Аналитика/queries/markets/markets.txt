@@ -1,0 +1,15 @@
+SELECT 
+	distinct 
+		case when p.market like '%1x2%' then '1x2'
+			when p.market like '%AH%' then 'AH'
+			when p.market like '%Winner%' then 'Winner'
+			when p.market like '%BTS%' then 'BTS'
+			when p.market like '%CS%' then 'CS'
+			when p.market like '%DC%' then 'DC'
+			when p.market like '%EH%' then 'EH'
+			when p.market like '%H/A%' then 'H/A'
+			when p.market like '%O/U%' then 'O/U'
+			else p.market 
+		end as market
+from prediction p 
+order by p.market asc;

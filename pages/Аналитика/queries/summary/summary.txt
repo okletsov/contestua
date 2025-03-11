@@ -1,0 +1,27 @@
+select
+	*
+	, round(t1.units / t1.bets * 100, 2) as ROI
+from (
+	SELECT 
+		count(psr.id) as bets
+		, sum(`psr`.`won`) as won
+		, sum(case when psr.result_for_streak = 'lost' then 1 else 0 end) as lost
+		, sum(case when psr.result_for_streak = 'void' then 1 else 0 end) as void
+		, sum(psr.actual_unit_outcome) as units
+	from prediction_seas_refined psr 
+		join contest c on c.id = psr.seasonal_contest_id
+	where 1=1
+ 		and psr.count_in_contest = 1
+ 		and psr.count_lost = 0
+ 		and psr.`result` = psr.actual_result
+		and psr.result != 'not-played'
+ 		and psr.user_id = '{{Select_participant.selectedOptionValue}}'
+		and ({{MultiSelect_contest.selectedOptionValues.length === 0}} 
+			OR psr.seasonal_contest_id in ({{utils.commaSeparate(MultiSelect_contest.selectedOptionValues)}}))
+		and ({{MultiSelect_sports.selectedOptionValues.length === 0}} 
+			OR psr.sport in ({{utils.commaSeparate(MultiSelect_sports.selectedOptionValues)}}))
+		and ({{MultiSelect_markets.selectedOptionValues.length === 0}} 
+			OR psr.market in ({{utils.commaSeparate(MultiSelect_markets.selectedOptionValues)}}))
+		and ({{Input_min_odds.text === null}} OR psr.user_pick_value >= '{{Input_min_odds.text}}')
+		and ({{Input_max_odds.text === null}} OR psr.user_pick_value <= '{{Input_max_odds.text}}')
+) t1;

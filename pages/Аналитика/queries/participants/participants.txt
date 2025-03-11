@@ -1,0 +1,7 @@
+SELECT 
+	un.user_id
+	, un.nickname
+FROM user_nickname un
+where un.is_active = 1
+order by un.nickname asc
+;

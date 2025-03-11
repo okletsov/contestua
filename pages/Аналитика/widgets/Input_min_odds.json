@@ -1,0 +1,82 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 21,
+  "boxShadow": "none",
+  "defaultText": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isDisabled"
+    },
+    {
+      "key": "onTextChanged"
+    },
+    {
+      "key": "onSubmit"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTextChanged"
+    },
+    {
+      "key": "onSubmit"
+    }
+  ],
+  "iconAlign": "left",
+  "inputType": "NUMBER",
+  "isDisabled": "{{Select_participant.isValid ? false : true}}",
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "mpzdgi89nx",
+  "label": "Коэф. от",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelTextColor": "#f4f4f5",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "maxNum": "15",
+  "minDynamicHeight": 4,
+  "minNum": "1.5",
+  "minWidth": 450,
+  "mobileBottomRow": 21,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 20,
+  "mobileTopRow": 14,
+  "needsErrorInfo": false,
+  "onSubmit": "{{summary.run();\nbySport.run();\nbyMarket.run();\nbyOdds.run();\nrunning_sum.run()}}",
+  "onTextChanged": "{{summary.run();\nbySport.run();\nbyMarket.run();\nbyOdds.run();\nrunning_sum.run()}}",
+  "parentColumnSpace": 15.21875,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "Нет",
+  "renderMode": "CANVAS",
+  "resetOnSubmit": false,
+  "responsiveBehavior": "fill",
+  "rightColumn": 31,
+  "shouldAllowAutofill": false,
+  "showStepArrows": true,
+  "topRow": 14,
+  "type": "INPUT_WIDGET_V2",
+  "version": 2,
+  "widgetId": "mppksuu11o",
+  "widgetName": "Input_min_odds"
+}

@@ -1,0 +1,53 @@
+select
+	*
+	, round(t1.units / t1.bets * 100, 2) as ROI
+from (
+	SELECT 
+		row_number() over(order by count(psr.id) desc) as `index` 
+		, case when psr.market like '%1x2%' then '1x2'
+			when psr.market like '%AH%' then 'AH'
+			when psr.market like '%Winner%' then 'Winner'
+			when psr.market like '%BTS%' then 'BTS'
+			when psr.market like '%CS%' then 'CS'
+			when psr.market like '%DC%' then 'DC'
+			when psr.market like '%EH%' then 'EH'
+			when psr.market like '%H/A%' then 'H/A'
+			when psr.market like '%O/U%' then 'O/U'
+			else psr.market 
+		end as market
+		, count(psr.id) as bets
+		, sum(`psr`.`won`) as won
+		, sum(case when psr.result_for_streak = 'lost' then 1 else 0 end) as lost
+		, sum(case when psr.result_for_streak = 'void' then 1 else 0 end) as void
+		, sum(psr.actual_unit_outcome) as units
+	from prediction_seas_refined psr 
+		join user_nickname un on un.user_id = psr.user_id
+		join contest c on c.id = psr.seasonal_contest_id
+	where 1=1
+		and psr.count_in_contest = 1
+ 		and psr.count_lost = 0
+ 		and psr.`result` = psr.actual_result
+		and psr.result != 'not-played'
+ 		and psr.user_id = '{{Select_participant.selectedOptionValue}}'
+		and ({{MultiSelect_contest.selectedOptionValues.length === 0}} 
+			OR psr.seasonal_contest_id in ({{utils.commaSeparate(MultiSelect_contest.selectedOptionValues)}}))
+		and ({{MultiSelect_sports.selectedOptionValues.length === 0}} 
+			OR psr.sport in ({{utils.commaSeparate(MultiSelect_sports.selectedOptionValues)}}))
+		and ({{MultiSelect_markets.selectedOptionValues.length === 0}} 
+			OR psr.market in ({{utils.commaSeparate(MultiSelect_markets.selectedOptionValues)}}))
+		and ({{Input_min_odds.text === null}} OR psr.user_pick_value >= '{{Input_min_odds.text}}')
+		and ({{Input_max_odds.text === null}} OR psr.user_pick_value <= '{{Input_max_odds.text}}')
+	group by case 
+			when psr.market like '%1x2%' then '1x2'
+			when psr.market like '%AH%' then 'AH'
+			when psr.market like '%Winner%' then 'Winner'
+			when psr.market like '%BTS%' then 'BTS'
+			when psr.market like '%CS%' then 'CS'
+			when psr.market like '%DC%' then 'DC'
+			when psr.market like '%EH%' then 'EH'
+			when psr.market like '%H/A%' then 'H/A'
+			when psr.market like '%O/U%' then 'O/U'
+			else psr.market 
+		end
+) t1
+order by t1.bets desc;
