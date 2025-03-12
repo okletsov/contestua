@@ -14,12 +14,6 @@
       "key": "borderRadius"
     },
     {
-      "key": "isDisabled"
-    },
-    {
-      "key": "labelText"
-    },
-    {
       "key": "sourceData"
     }
   ],
@@ -30,6 +24,12 @@
     },
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "optionLabel"
+    },
+    {
+      "key": "onOptionChange"
     }
   ],
   "dynamicTriggerPathList": [
@@ -40,7 +40,7 @@
   "hideCard": false,
   "iconSVG": "/static/media/icon.a62f1265827a5af78966a733a05697db.svg",
   "isDeprecated": false,
-  "isDisabled": "{{Select_contest.isValid ? false : true}}",
+  "isDisabled": "false",
   "isFilterable": false,
   "isLoading": false,
   "isRequired": true,
@@ -49,11 +49,11 @@
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "BOLD",
-  "labelText": "Участники - {{participants_in_contest.data.length}}",
+  "labelText": "Участник",
   "labelTextColor": "#f4f4f5",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 33,
+  "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -62,7 +62,7 @@
   "mobileRightColumn": 20,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onOptionChange": "{{finished_bets.run()}}",
+  "onOptionChange": "{{contests_numbered.run();\nmarkets.run();\nsports.run();\nsummary.run();\nbySport.run();\nbyMarket.run();\nbyOdds.run();\nrunning_sum.run()}}",
   "optionLabel": "label",
   "optionValue": "value",
   "parentColumnSpace": 14.234375,
@@ -71,12 +71,12 @@
   "placeholderText": "Выберите участника",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 31,
   "searchTags": [
     "dropdown"
   ],
   "serverSideFiltering": false,
-  "sourceData": "{{participants_in_contest.data.map((obj) =>{ return  {'label': obj.label, 'value': obj.value }})}}",
+  "sourceData": "{{participants.data.map((obj) =>{ return  {'label': obj.nickname, 'value': obj.user_id }})}}",
   "tags": [
     "Suggested",
     "Select"
@@ -85,6 +85,6 @@
   "topRow": 0,
   "type": "SELECT_WIDGET",
   "version": 1,
-  "widgetId": "riznknq1ja",
+  "widgetId": "b712wi0ut5",
   "widgetName": "Select_participant"
 }

@@ -5,7 +5,6 @@
   "bottomRow": 7,
   "boxShadow": "none",
   "defaultOptionValue": "null",
-  "displayName": "Select",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -14,13 +13,10 @@
       "key": "borderRadius"
     },
     {
-      "key": "isDisabled"
-    },
-    {
-      "key": "labelText"
-    },
-    {
       "key": "sourceData"
+    },
+    {
+      "key": "isDisabled"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -30,6 +26,9 @@
     },
     {
       "key": "isDisabled"
+    },
+    {
+      "key": "onOptionChange"
     }
   ],
   "dynamicTriggerPathList": [
@@ -37,54 +36,43 @@
       "key": "onOptionChange"
     }
   ],
-  "hideCard": false,
-  "iconSVG": "/static/media/icon.a62f1265827a5af78966a733a05697db.svg",
-  "isDeprecated": false,
-  "isDisabled": "{{Select_contest.isValid ? false : true}}",
+  "isDisabled": "{{Select_participant.isValid ? false : true}}",
   "isFilterable": false,
   "isLoading": false,
-  "isRequired": true,
+  "isRequired": false,
   "isVisible": true,
-  "key": "kxygzppish",
+  "key": "avlb6kj7tl",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "BOLD",
-  "labelText": "Участники - {{participants_in_contest.data.length}}",
+  "labelText": "Конкурс",
   "labelTextColor": "#f4f4f5",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 33,
+  "leftColumn": 32,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 7,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 20,
-  "mobileTopRow": 0,
+  "mobileBottomRow": 17,
+  "mobileLeftColumn": 33,
+  "mobileRightColumn": 53,
+  "mobileTopRow": 10,
   "needsErrorInfo": false,
-  "onOptionChange": "{{finished_bets.run()}}",
+  "onOptionChange": "{{summary.run();\nbySport.run();\nbyMarket.run();\nbyOdds.run();\nrunning_sum.run()}}",
   "optionLabel": "label",
   "optionValue": "value",
-  "parentColumnSpace": 14.234375,
+  "parentColumnSpace": 15.21875,
   "parentId": "0",
   "parentRowSpace": 10,
-  "placeholderText": "Выберите участника",
+  "placeholderText": "Все",
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 64,
-  "searchTags": [
-    "dropdown"
-  ],
   "serverSideFiltering": false,
-  "sourceData": "{{participants_in_contest.data.map((obj) =>{ return  {'label': obj.label, 'value': obj.value }})}}",
-  "tags": [
-    "Suggested",
-    "Select"
-  ],
-  "thumbnailSVG": "https://appcdn.appsmith.com/static/media/thumbnail.9aef24cb159e9c6e4d0f1d7ca4fb0c79.svg",
+  "sourceData": "{{contests_numbered.data.map( (obj) =>{ return  {'label': obj.label, 'value': obj.id }})}}",
   "topRow": 0,
-  "type": "SELECT_WIDGET",
+  "type": "MULTI_SELECT_WIDGET_V2",
   "version": 1,
-  "widgetId": "riznknq1ja",
-  "widgetName": "Select_participant"
+  "widgetId": "bbwd8x660h",
+  "widgetName": "MultiSelect_contest"
 }
