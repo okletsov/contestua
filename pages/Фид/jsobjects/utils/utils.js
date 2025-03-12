@@ -11,5 +11,8 @@ export default {
       const formattedDateTime = date.toLocaleString('en-US', options).replace(',', ',');
       
       return formattedDateTime;	
+	},
+	clearInputs() {
+		Select_participant.setSelectedOption("");
 	}
 }
