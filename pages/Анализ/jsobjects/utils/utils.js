@@ -13,5 +13,8 @@ export default {
 			"byMarket": byMarket.data,
 			"byOdds": byOdds.data
 		}
+	},
+	clearInputs() {
+		Select_participant.setSelectedOption("");
 	}
 }
