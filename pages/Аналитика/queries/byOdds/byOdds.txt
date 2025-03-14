@@ -30,7 +30,7 @@ from (
 		and ({{MultiSelect_sports.selectedOptionValues.length === 0}} 
 			OR psr.sport in ({{utils.commaSeparate(MultiSelect_sports.selectedOptionValues)}}))
 		and ({{MultiSelect_markets.selectedOptionValues.length === 0}} 
-			OR psr.market in ({{utils.commaSeparate(MultiSelect_markets.selectedOptionValues)}}))
+			OR ({{utils.commaSeparateIn(MultiSelect_markets.selectedOptionValues)}}))
 		and ({{Input_min_odds.text === null}} OR psr.user_pick_value >= '{{Input_min_odds.text}}')
 		and ({{Input_max_odds.text === null}} OR psr.user_pick_value <= '{{Input_max_odds.text}}')
 	group by case 

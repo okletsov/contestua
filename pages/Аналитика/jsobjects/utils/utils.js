@@ -6,6 +6,13 @@ export default {
 		return passedArray.map(e => `'${e}'`).join();	
 		}
 	} ,
+	commaSeparateIn(passedArray) {
+    if(passedArray.length === 0) {
+			return `''`;
+		} else { 
+		return passedArray.map(e => `psr.market LIKE '%${e}%'`).join(` OR `);	
+		}
+	},
 	customWidgetData() {
 		return {
 			"summary": summary.data,
