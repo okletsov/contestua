@@ -1,0 +1,20 @@
+{
+  "gitSyncId": "661eca10b7e3352fe43e8a8c_73e02d6f-b798-4ac0-aaca-5a24854f70f1",
+  "id": "Аналитика_JSObject1",
+  "unpublishedCollection": {
+    "name": "JSObject1",
+    "pageId": "Аналитика",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ]
+  }
+}

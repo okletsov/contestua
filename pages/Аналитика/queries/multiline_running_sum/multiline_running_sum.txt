@@ -1,0 +1,12 @@
+SELECT 
+	un.nickname
+	, row_number() over (partition by un.nickname order by psr.initial_date_scheduled asc, psr.date_predicted asc) AS `index`
+	, SUM(psr.actual_unit_outcome) OVER (partition by un.nickname ORDER BY psr.initial_date_scheduled asc, psr.date_predicted asc) AS running_sum
+from prediction_seas_refined psr 
+	join contest c on c.id = psr.seasonal_contest_id
+	join user_nickname un on un.user_id = psr.user_id
+where 1=1 
+	and un.is_active = 1
+	and psr.count_in_contest = 1
+	and psr.result != 'not-played'
+	and psr.seasonal_contest_id = '891eca1d-f6b0-11ef-9c31-000017024a87';

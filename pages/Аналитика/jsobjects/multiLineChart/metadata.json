@@ -1,0 +1,16 @@
+{
+  "gitSyncId": "661eca10b7e3352fe43e8a8c_f01dd92f-c930-45d4-aec1-a58d6e7c848d",
+  "id": "Аналитика_multiLineChart",
+  "unpublishedCollection": {
+    "name": "multiLineChart",
+    "pageId": "Аналитика",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      }
+    ]
+  }
+}
