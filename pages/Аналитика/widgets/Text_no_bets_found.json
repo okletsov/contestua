@@ -28,7 +28,7 @@
   "fontSize": "0.875rem",
   "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": "{{summary.data[0].bets === 0}}",
+  "isVisible": "{{summary.data[0].bets === 0 && Select_participant.isDirty}}",
   "key": "vb9za8zj2j",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,

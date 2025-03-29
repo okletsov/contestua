@@ -1,7 +1,8 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 136,
+  "bottomRow": 4,
+  "displayName": "Text",
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,46 +12,53 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "1rem",
   "fontStyle": "BOLD",
+  "hideCard": false,
+  "iconSVG": "https://appcdn.appsmith.com/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
+  "isDeprecated": false,
   "isLoading": false,
-  "isVisible": false,
-  "key": "llvkg83sio",
+  "isVisible": true,
+  "key": "ts7k3l8f25",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 227,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 16,
-  "mobileTopRow": 223,
-  "needsErrorInfo": false,
-  "originalBottomRow": 224,
-  "originalTopRow": 220,
+  "mobileBottomRow": 62,
+  "mobileLeftColumn": 24,
+  "mobileRightColumn": 40,
+  "mobileTopRow": 58,
+  "originalBottomRow": 8,
+  "originalTopRow": 4,
   "overflow": "NONE",
-  "parentColumnSpace": 15.25,
+  "parentColumnSpace": 14.234375,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 64,
+  "searchTags": [
+    "typography",
+    "paragraph",
+    "label"
+  ],
   "shouldTruncate": false,
-  "text": "{{multiLineChart.getYAxisValues(multiline_running_sum.data)}}",
-  "textAlign": "LEFT",
-  "textColor": "#f4f4f5",
-  "topRow": 132,
+  "tags": [
+    "Suggested",
+    "Content"
+  ],
+  "text": "Таблица результатов  -->",
+  "textAlign": "CENTER",
+  "textColor": "rgba(255, 255, 255, 0.9)",
+  "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "azmd2frp10",
-  "widgetName": "Text1"
+  "widgetId": "0esqb5vyy1",
+  "widgetName": "Text_BetsTitle"
 }
