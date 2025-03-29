@@ -1,7 +1,21 @@
 export default {
-	myVar1: [],
-	parseData(input) {
-		const groupedData = input.reduce((acc, item) => {
+	// Method to extract distinct nicknames
+	getNicknames(sqlData) {
+		const nicknames = new Set();
+		sqlData.forEach(row => nicknames.add(row.nickname));
+		return Array.from(nicknames);
+	},
+
+	// Method to extract distinct indexes sorted in ascending order
+	getIndexes(sqlData) {
+		const indexes = new Set();
+		sqlData.forEach(row => indexes.add(row.index));
+		return Array.from(indexes).sort((a, b) => a - b);
+	},
+	
+	//Method to transform sql data to be used in a chart
+	transformSqlData(sqlData) {
+		const groupedData = sqlData.reduce((acc, item) => {
 			const { nickname, running_sum } = item;
 			if (!acc[nickname]) {
 				acc[nickname] = [];
@@ -13,20 +27,23 @@ export default {
 		return Object.keys(groupedData).map(name => ({
 			name,
 			type: 'line',
-			stack: 'Total',
 			data: groupedData[name]
 		}));
 	},
-	getData(parsedInput) {
+	
+	//Generate chart code
+	getData(sqlData) {
+		
+		const transformedData = this.transformSqlData(sqlData);
+		const nicknames = this.getNicknames(sqlData);
+		const indexes = this.getIndexes(sqlData);
+		
 		return {
-			title: {
-				text: 'Stacked Line'
-			},
 			tooltip: {
 				trigger: 'axis'
 			},
 			legend: {
-				data: ['Ajax', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
+				data: nicknames
 			},
 			grid: {
 				left: '3%',
@@ -34,20 +51,15 @@ export default {
 				bottom: '3%',
 				containLabel: true
 			},
-			toolbox: {
-				feature: {
-					saveAsImage: {}
-				}
-			},
 			xAxis: {
 				type: 'category',
 				boundaryGap: false,
-				data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+				data: indexes
 			},
 			yAxis: {
 				type: 'value'
 			},
-			series: parsedInput
+			series: transformedData
 		}
 	}
 }

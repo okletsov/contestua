@@ -1,6 +1,6 @@
 {
   "gitSyncId": "661eca10b7e3352fe43e8a8c_c91b4ac0-f32e-4ebe-95f5-0f0c70b710b1",
-  "id": "Аналитика_multiLineChart.parseData",
+  "id": "Аналитика_multiLineChart.transformSqlData",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -8,7 +8,7 @@
       "encodeParamsToggle": true,
       "jsArguments": [
         {
-          "name": "input"
+          "name": "sqlData"
         }
       ],
       "paginationType": "NONE",
@@ -26,9 +26,9 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": true,
-    "fullyQualifiedName": "multiLineChart.parseData",
-    "name": "parseData",
+    "executeOnLoad": false,
+    "fullyQualifiedName": "multiLineChart.transformSqlData",
+    "name": "transformSqlData",
     "pageId": "Аналитика",
     "userSetOnLoad": false
   }

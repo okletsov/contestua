@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "661eca10b7e3352fe43e8a8c_540875e3-8527-44d7-a558-4033831dee39",
-  "id": "Аналитика_multiLineChart.getData",
+  "gitSyncId": "661eca10b7e3352fe43e8a8c_ade5bbdd-3be3-44bc-b1e2-c4af1f779d6c",
+  "id": "Аналитика_multiLineChart.getNicknames",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -27,8 +27,8 @@
       }
     ],
     "executeOnLoad": false,
-    "fullyQualifiedName": "multiLineChart.getData",
-    "name": "getData",
+    "fullyQualifiedName": "multiLineChart.getNicknames",
+    "name": "getNicknames",
     "pageId": "Аналитика",
     "userSetOnLoad": false
   }
