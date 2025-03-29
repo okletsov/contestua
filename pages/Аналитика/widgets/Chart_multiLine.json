@@ -3,7 +3,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 220,
+  "bottomRow": 131,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "jdj1oyhtsx": {
@@ -92,8 +92,8 @@
   "mobileRightColumn": 24,
   "mobileTopRow": 180,
   "needsErrorInfo": true,
-  "originalBottomRow": 218,
-  "originalTopRow": 176,
+  "originalBottomRow": 220,
+  "originalTopRow": 178,
   "parentColumnSpace": 15.25,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -101,7 +101,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "showDataPointLabel": false,
-  "topRow": 178,
+  "topRow": 89,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "4ssrehk9u2",
