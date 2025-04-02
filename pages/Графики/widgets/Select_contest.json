@@ -1,0 +1,84 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 7,
+  "boxShadow": "none",
+  "defaultOptionValue": "{{ ((options, serverSideFiltering) => ( '{\"label\": \"' + contests_numbered.data[0].label + '\", \"value\": \"' + contests_numbered.data[0].id + '\"}'))(Select_contest.options, Select_contest.serverSideFiltering) }}",
+  "displayName": "Select",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
+    },
+    {
+      "key": "defaultOptionValue"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.a62f1265827a5af78966a733a05697db.svg",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isFilterable": false,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "kxygzppish",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "BOLD",
+  "labelText": "Конкурс",
+  "labelTextColor": "#f4f4f5",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 7,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 20,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "onOptionChange": "{{running_sum_by_bet.run();\nrunning_sum_by_date.run()}}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 14.234375,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "Выберите конкурс",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchTags": [
+    "dropdown"
+  ],
+  "serverSideFiltering": false,
+  "sourceData": "{{contests_numbered.data.map( (obj) =>{ return  {'label': obj.label, 'value': obj.id } })}}",
+  "tags": [
+    "Suggested",
+    "Select"
+  ],
+  "thumbnailSVG": "https://appcdn.appsmith.com/static/media/thumbnail.9aef24cb159e9c6e4d0f1d7ca4fb0c79.svg",
+  "topRow": 0,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "duew44ev4v",
+  "widgetName": "Select_contest"
+}

@@ -1,0 +1,31 @@
+select 
+	t1.nickname
+	, t1.date as `index`
+	, SUM(t1.units_per_date) 
+		OVER (
+			partition by 
+				t1.nickname
+			ORDER BY 
+				t1.date asc
+			) 
+	AS running_sum
+from (
+	SELECT 
+		un.nickname
+		, date(psr.initial_date_scheduled) as date
+		, sum(psr.actual_unit_outcome) as units_per_date
+	from prediction_seas_refined psr 
+		join contest c on c.id = psr.seasonal_contest_id
+		join user_nickname un on un.user_id = psr.user_id
+	where 1=1 
+		and un.is_active = 1
+		and psr.count_in_contest = 1
+		and psr.result != 'not-played'
+		and psr.seasonal_contest_id = '{{Select_contest.selectedOptionValue}}'
+	group by 
+		un.nickname
+		, date(psr.initial_date_scheduled)
+	order by 
+		un.nickname
+		, date(psr.initial_date_scheduled)
+) t1;

@@ -1,0 +1,4 @@
+SELECT * FROM contests_numbered
+order by 
+	case when is_active = 1 then 0 else 1 end
+	, contest_number asc;

@@ -9,4 +9,4 @@ where 1=1
 	and un.is_active = 1
 	and psr.count_in_contest = 1
 	and psr.result != 'not-played'
-	and psr.seasonal_contest_id = '891eca1d-f6b0-11ef-9c31-000017024a87';
+	and psr.seasonal_contest_id = '{{Select_contest.selectedOptionValue}}';

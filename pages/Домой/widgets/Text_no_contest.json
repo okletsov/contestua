@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 209,
+  "bottomRow": 210,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -41,8 +41,8 @@
   "mobileLeftColumn": 24,
   "mobileRightColumn": 40,
   "mobileTopRow": 58,
-  "originalBottomRow": 220,
-  "originalTopRow": 216,
+  "originalBottomRow": 209,
+  "originalTopRow": 205,
   "overflow": "NONE",
   "parentColumnSpace": 14.234375,
   "parentId": "0",
@@ -63,7 +63,7 @@
   "text": "Конкурс пока не проводится",
   "textAlign": "CENTER",
   "textColor": "rgba(255, 255, 255, 0.9)",
-  "topRow": 205,
+  "topRow": 206,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,

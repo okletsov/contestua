@@ -3,7 +3,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 132,
+  "bottomRow": 67,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "jdj1oyhtsx": {
@@ -13,7 +13,7 @@
   },
   "chartName": "Sales Report",
   "chartType": "CUSTOM_ECHART",
-  "customEChartConfig": "{{ ((chartType) => ( \noption = multiLineChart.getData(multiline_running_sum.data)\n))(Chart_multiLine.chartType) }}",
+  "customEChartConfig": "{{ ((chartType) => ( \noption = Switch1.isSwitchedOn ? multiLineChart.getData(running_sum_by_bet.data) : multiLineChart.getData(running_sum_by_date.data)\n))(Chart_multiLine.chartType) }}",
   "customFusionChartConfig": {
     "dataSource": {
       "chart": {
@@ -63,26 +63,26 @@
   },
   "dynamicBindingPathList": [
     {
-      "key": "customEChartConfig"
-    },
-    {
       "key": "borderRadius"
-    },
-    {
-      "key": "boxShadow"
     },
     {
       "key": "accentColor"
     },
     {
       "key": "fontFamily"
+    },
+    {
+      "key": "customEChartConfig"
+    },
+    {
+      "key": "boxShadow"
     }
   ],
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "start",
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "isLoading": false,
-  "isVisible": false,
+  "isVisible": true,
   "key": "29cqzp33oo",
   "labelOrientation": "auto",
   "leftColumn": 0,
@@ -92,8 +92,8 @@
   "mobileRightColumn": 24,
   "mobileTopRow": 180,
   "needsErrorInfo": true,
-  "originalBottomRow": 220,
-  "originalTopRow": 178,
+  "originalBottomRow": 64,
+  "originalTopRow": 21,
   "parentColumnSpace": 15.25,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -101,10 +101,10 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "showDataPointLabel": false,
-  "topRow": 90,
+  "topRow": 13,
   "type": "CHART_WIDGET",
   "version": 1,
-  "widgetId": "4ssrehk9u2",
+  "widgetId": "hzwiii380s",
   "widgetName": "Chart_multiLine",
   "xAxisName": "Product Line",
   "yAxisName": "Revenue($)"

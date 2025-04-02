@@ -1,12 +1,12 @@
 {
-  "gitSyncId": "67cde98f5ffc5c5e572b2ddb_bfcb1640-aa18-4286-bdf9-8d0242338859",
+  "gitSyncId": "661eca10b7e3352fe43e8a8c_3c7a25e2-e9a8-4ab4-8f46-3ecfccbe5377",
   "unpublishedPage": {
     "isHidden": false,
     "layouts": [
       {
         "dsl": {
           "backgroundColor": "none",
-          "bottomRow": 2220,
+          "bottomRow": 760,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
@@ -26,7 +26,7 @@
         }
       }
     ],
-    "name": "Аналитика",
+    "name": "Графики",
     "slug": ""
   }
 }

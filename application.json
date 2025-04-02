@@ -66,6 +66,10 @@
     {
       "id": "Аналитика",
       "isDefault": false
+    },
+    {
+      "id": "Графики",
+      "isDefault": false
     }
   ],
   "unpublishedAppLayout": {
