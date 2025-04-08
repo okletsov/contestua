@@ -34,6 +34,9 @@
     },
     {
       "key": "groupButtons.groupButton3.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButton3.onClick"
     }
   ],
   "dynamicTriggerPathList": [

@@ -2,14 +2,14 @@
   "animateLoading": true,
   "backgroundColor": "#3a3936",
   "borderRadius": "1.5rem",
-  "bottomRow": 4060,
+  "bottomRow": 4080,
   "boxShadow": "none",
   "canEscapeKeyClose": true,
   "canOutsideClickClose": true,
   "children": [
     {
       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-      "bottomRow": 3870,
+      "bottomRow": 3890,
       "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
       "canExtend": true,
       "detachFromLayout": true,
@@ -58,17 +58,13 @@
   "displayName": "Modal",
   "dynamicBindingPathList": [],
   "dynamicHeight": "AUTO_HEIGHT",
-  "dynamicPropertyPathList": [
-    {
-      "key": "onClose"
-    }
-  ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "onClose"
     }
   ],
-  "height": 3870,
+  "height": 3890,
   "hideCard": false,
   "iconSVG": "https://appcdn.appsmith.com/static/media/icon.b374721fa8e1aeab7cf326c2d865506f.svg",
   "isCanvas": true,
@@ -78,13 +74,13 @@
   "leftColumn": 15,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 10,
-  "minHeight": 2790,
+  "minHeight": 3890,
   "mobileBottomRow": 214,
   "mobileLeftColumn": 15,
   "mobileRightColumn": 39,
   "mobileTopRow": 190,
   "needsErrorInfo": false,
-  "onClose": "",
+  "onClose": "{{}}",
   "originalBottomRow": 2300,
   "originalTopRow": 190,
   "parentColumnSpace": 6.84375,

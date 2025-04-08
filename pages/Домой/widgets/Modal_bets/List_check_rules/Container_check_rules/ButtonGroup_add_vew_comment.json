@@ -34,6 +34,12 @@
     },
     {
       "key": "groupButtons.groupButton3.isDisabled"
+    },
+    {
+      "key": "groupButtons.groupButton3.onClick"
+    },
+    {
+      "key": "groupButtons.groupButton2.onClick"
     }
   ],
   "dynamicTriggerPathList": [
@@ -55,7 +61,7 @@
       "isVisible": "true",
       "label": "Add",
       "menuItems": {},
-      "onClick": "{{showModal('Modal_add_comment');\nstoreValue('selectedPredictionData', currentItem);\nstoreValue(currentItem.id + '_commentsCount', appsmith.store[currentItem.id + '_commentsCount'] === undefined ? currentItem.comments : appsmith.store[currentItem.id + '_commentsCount']);\nstoreValue('parentModal', \"\");}}",
+      "onClick": "{{showModal('Modal_add_comment');\nstoreValue('selectedPredictionData', currentItem);\nstoreValue(currentItem.id + '_commentsCount', appsmith.store[currentItem.id + '_commentsCount'] === undefined ? currentItem.comments : appsmith.store[currentItem.id + '_commentsCount']);\nstoreValue('parentModal', 'Modal_bets');}}",
       "placement": "CENTER",
       "widgetId": ""
     },
@@ -104,7 +110,7 @@
           "widgetId": ""
         }
       },
-      "onClick": "{{showModal('Modal_view_comments');\nstoreValue('selectedPredictionData', currentItem);\ncomments_for_prediction.run();\nstoreValue(currentItem.id + '_commentsCount', appsmith.store[currentItem.id + '_commentsCount'] === undefined ? currentItem.comments : appsmith.store[currentItem.id + '_commentsCount']);\nstoreValue('parentModal', );}}",
+      "onClick": "{{showModal('Modal_view_comments');\nstoreValue('selectedPredictionData', currentItem);\ncomments_for_prediction.run();\nstoreValue(currentItem.id + '_commentsCount', appsmith.store[currentItem.id + '_commentsCount'] === undefined ? currentItem.comments : appsmith.store[currentItem.id + '_commentsCount']);\nstoreValue('parentModal', 'Modal_bets');}}",
       "placement": "CENTER",
       "widgetId": ""
     }

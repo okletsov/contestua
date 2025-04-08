@@ -3,7 +3,7 @@
   "borderColor": "#E0DEDE",
   "borderRadius": "0.375rem",
   "borderWidth": "0",
-  "bottomRow": 152,
+  "bottomRow": 151,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "defaultModel": "{{utils.customWidgetData()}}",
   "displayName": "Custom",

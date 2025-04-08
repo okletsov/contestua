@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 156,
+  "bottomRow": 155,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -63,7 +63,7 @@
   "text": "Нет активных конкурсов",
   "textAlign": "CENTER",
   "textColor": "rgba(255, 255, 255, 0.9)",
-  "topRow": 152,
+  "topRow": 151,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
