@@ -76,13 +76,21 @@
     },
     {
       "key": "boxShadow"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "start",
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{cr_raw_ongoing.data.length === 0 ? false : true}}",
   "key": "29cqzp33oo",
   "labelOrientation": "auto",
   "leftColumn": 0,
