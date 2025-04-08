@@ -7,7 +7,7 @@
         "dsl": {
           "backgroundColor": "none",
           "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-          "bottomRow": 2100,
+          "bottomRow": 2230,
           "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
           "canExtend": true,
           "containerStyle": "none",

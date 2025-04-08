@@ -1,7 +1,11 @@
 {
   "animateLoading": true,
+  "backgroundColor": "#484642",
+  "borderColor": "rgba(255, 255, 255, 0.9)",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 128,
+  "borderWidth": "2",
+  "bottomRow": 18,
+  "disableLink": true,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -14,48 +18,44 @@
       "key": "borderRadius"
     },
     {
-      "key": "isVisible"
-    },
-    {
       "key": "text"
     }
   ],
-  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
-      "key": "isVisible"
+      "key": "fontSize"
     },
     {
-      "key": "fontSize"
+      "key": "fontStyle"
     }
   ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.75rem",
+  "fontSize": "0.65rem",
   "fontStyle": "BOLD",
   "hideCard": false,
   "iconSVG": "https://appcdn.appsmith.com/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
   "isDeprecated": false,
   "isLoading": false,
-  "isVisible": "{{check_rules.data.length === 0 ? false : true}}",
-  "key": "ts7k3l8f25",
-  "leftColumn": 19,
+  "isVisible": true,
+  "key": "taof8sgrxu",
+  "leftColumn": 2,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 62,
-  "mobileLeftColumn": 24,
-  "mobileRightColumn": 40,
-  "mobileTopRow": 58,
-  "originalBottomRow": 127,
-  "originalTopRow": 123,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 1,
+  "mobileRightColumn": 17,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
   "overflow": "NONE",
-  "parentColumnSpace": 14.234375,
-  "parentId": "0",
+  "parentColumnSpace": 6.40625,
+  "parentId": "w2opkjuqt8",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 44,
+  "rightColumn": 51,
   "searchTags": [
     "typography",
     "paragraph",
@@ -66,13 +66,13 @@
     "Suggested",
     "Content"
   ],
-  "text": "Проверка правил - {{check_rules.data.length}}\n",
+  "text": "{{currentItem.description}}\n{{currentItem.seasonal_validity_status === 60 ? '<br>Payout = ' + currentItem.payout : ''}}",
   "textAlign": "CENTER",
   "textColor": "rgba(255, 255, 255, 0.9)",
-  "topRow": 124,
+  "topRow": 8,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "2biq53ydrt",
-  "widgetName": "Text_check_rules_title"
+  "widgetId": "hktsioi5au",
+  "widgetName": "Text_descriptionCR"
 }

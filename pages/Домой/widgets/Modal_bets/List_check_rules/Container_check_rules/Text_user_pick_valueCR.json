@@ -1,9 +1,10 @@
 {
   "animateLoading": true,
-  "backgroundColor": "",
+  "backgroundColor": "{{\n  function() {\n    if (currentItem.actual_result === 'won') {\n      return 'GREEN';\n    } else if (currentItem.actual_result === 'lost') {\n      return 'RED';\n    } else if (currentItem.actual_result === 'void') {\n      return '#cdcd00';\n    } else if (currentItem.actual_result === 'void-lost') {\n\t\t\treturn '#f08080'\n\t\t} else if (currentItem.actual_result === 'void-won') {\n\t\t\treturn '#9bcd9b'\n\t\t} else {\n\t\t\t'none'\n\t\t}\n  }()\n}}",
+  "borderColor": "",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 4,
-  "disableLink": false,
+  "borderWidth": "1",
+  "bottomRow": 15,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -17,6 +18,9 @@
     },
     {
       "key": "text"
+    },
+    {
+      "key": "backgroundColor"
     }
   ],
   "dynamicHeight": "FIXED",
@@ -26,19 +30,22 @@
     },
     {
       "key": "fontStyle"
+    },
+    {
+      "key": "backgroundColor"
     }
   ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.75rem",
-  "fontStyle": "BOLD,UNDERLINE",
+  "fontSize": "0.85rem",
+  "fontStyle": "BOLD",
   "hideCard": false,
   "iconSVG": "https://appcdn.appsmith.com/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
   "isDeprecated": false,
   "isLoading": false,
   "isVisible": true,
   "key": "taof8sgrxu",
-  "leftColumn": 2,
+  "leftColumn": 54,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -49,11 +56,11 @@
   "needsErrorInfo": false,
   "overflow": "NONE",
   "parentColumnSpace": 6.40625,
-  "parentId": "53g1f606wv",
+  "parentId": "w2opkjuqt8",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 27,
+  "rightColumn": 64,
   "searchTags": [
     "typography",
     "paragraph",
@@ -64,13 +71,13 @@
     "Suggested",
     "Content"
   ],
-  "text": "<a href=\"https://www.oddsportal.com/profile/{{currentItem.nickname}}/\" target=\"_blank\" style=\"color:{{'#ffffffe6'}};\">{{currentItem.nickname}}</a>",
-  "textAlign": "LEFT",
+  "text": "{{currentItem.user_pick_value}}",
+  "textAlign": "CENTER",
   "textColor": "rgba(255, 255, 255, 0.9)",
-  "topRow": 0,
+  "topRow": 11,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "k3kwrwrt63",
-  "widgetName": "Text_nicknameCR"
+  "widgetId": "m2t8qwv9mm",
+  "widgetName": "Text_user_pick_valueCR"
 }

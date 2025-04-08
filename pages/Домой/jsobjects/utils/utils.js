@@ -33,6 +33,8 @@ export default {
 			return future_bets.data;
 		} else if(buttonClicked === 'bets_with_recent_comments') {
 			return bets_with_recent_comments.data;
+		} else if(buttonClicked === 'check_rules') {
+			return check_rules.data;
 		}
 	},
 	getTitleForBetsModal() {
@@ -47,6 +49,8 @@ export default {
 			return 'Будущие ставки - ' + predictions;
 		} else if(buttonClicked === 'bets_with_recent_comments') {
 			return 'За неделю:' + "\n" + '- cтавок с комментами: ' + predictions + "\n" + '- всего комментариев: ' + bets_with_recent_comments.data[0].total_comments;
+		} else if(buttonClicked === 'check_rules') {
+			return 'Проверка правил - ' + predictions; 
 		}
 	},
 	customWidgetData() {

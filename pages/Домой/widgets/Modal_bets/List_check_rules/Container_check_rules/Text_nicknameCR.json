@@ -3,6 +3,7 @@
   "backgroundColor": "",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 4,
+  "disableLink": false,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -22,19 +23,22 @@
   "dynamicPropertyPathList": [
     {
       "key": "fontSize"
+    },
+    {
+      "key": "fontStyle"
     }
   ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.85rem",
-  "fontStyle": "BOLD",
+  "fontSize": "0.75rem",
+  "fontStyle": "BOLD,UNDERLINE",
   "hideCard": false,
   "iconSVG": "https://appcdn.appsmith.com/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
   "isDeprecated": false,
   "isLoading": false,
   "isVisible": true,
   "key": "taof8sgrxu",
-  "leftColumn": 27,
+  "leftColumn": 2,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -45,11 +49,11 @@
   "needsErrorInfo": false,
   "overflow": "NONE",
   "parentColumnSpace": 6.40625,
-  "parentId": "53g1f606wv",
+  "parentId": "w2opkjuqt8",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 27,
   "searchTags": [
     "typography",
     "paragraph",
@@ -60,13 +64,13 @@
     "Suggested",
     "Content"
   ],
-  "text": "{{utils.formatDateTime(currentItem.date_scheduled)}}, {{currentItem.market}}",
-  "textAlign": "RIGHT",
-  "textColor": "#71717a",
+  "text": "<a href=\"https://www.oddsportal.com/profile/{{currentItem.nickname}}/\" target=\"_blank\" style=\"color:{{'#ffffffe6'}};\">{{currentItem.nickname}}</a>",
+  "textAlign": "LEFT",
+  "textColor": "rgba(255, 255, 255, 0.9)",
   "topRow": 0,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "mutsvkopqd",
-  "widgetName": "Text_date_scheduledCR"
+  "widgetId": "vdzfiobhb4",
+  "widgetName": "Text_nicknameCR"
 }

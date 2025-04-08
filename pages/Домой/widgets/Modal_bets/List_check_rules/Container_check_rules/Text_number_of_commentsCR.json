@@ -1,10 +1,8 @@
 {
   "animateLoading": true,
-  "backgroundColor": "{{\n  function() {\n    if (currentItem.actual_result === 'won') {\n      return 'GREEN';\n    } else if (currentItem.actual_result === 'lost') {\n      return 'RED';\n    } else if (currentItem.actual_result === 'void') {\n      return '#cdcd00';\n    } else if (currentItem.actual_result === 'void-lost') {\n\t\t\treturn '#f08080'\n\t\t} else if (currentItem.actual_result === 'void-won') {\n\t\t\treturn '#9bcd9b'\n\t\t} else {\n\t\t\t'none'\n\t\t}\n  }()\n}}",
-  "borderColor": "",
+  "backgroundColor": "",
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "borderWidth": "1",
-  "bottomRow": 15,
+  "bottomRow": 22,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -18,26 +16,17 @@
     },
     {
       "key": "text"
-    },
-    {
-      "key": "backgroundColor"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "fontSize"
-    },
-    {
-      "key": "fontStyle"
-    },
-    {
-      "key": "backgroundColor"
     }
   ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "0.85rem",
+  "fontSize": "0.75rem",
   "fontStyle": "BOLD",
   "hideCard": false,
   "iconSVG": "https://appcdn.appsmith.com/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
@@ -45,7 +34,7 @@
   "isLoading": false,
   "isVisible": true,
   "key": "taof8sgrxu",
-  "leftColumn": 54,
+  "leftColumn": 19,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
@@ -56,11 +45,11 @@
   "needsErrorInfo": false,
   "overflow": "NONE",
   "parentColumnSpace": 6.40625,
-  "parentId": "53g1f606wv",
+  "parentId": "w2opkjuqt8",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 64,
+  "rightColumn": 34,
   "searchTags": [
     "typography",
     "paragraph",
@@ -71,13 +60,13 @@
     "Suggested",
     "Content"
   ],
-  "text": "{{currentItem.user_pick_value}}",
-  "textAlign": "CENTER",
-  "textColor": "rgba(255, 255, 255, 0.9)",
-  "topRow": 11,
+  "text": "{{\n   (() => {\n      const storedComments = appsmith.store[currentItem.id + '_commentsCount'];\n      let commentsToDisplay = undefined;\n\n      if (storedComments === undefined) {\n         commentsToDisplay = currentItem.comments;\n      } else {\n         commentsToDisplay = storedComments;\n      }\n\n      const label = commentsToDisplay === 1 ? ' comment' : ' comments';\n\n      return commentsToDisplay + label;\n   })()\n}}",
+  "textAlign": "RIGHT",
+  "textColor": "#e0dede",
+  "topRow": 18,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "3m8pfn3swu",
-  "widgetName": "Text_user_pick_valueCR"
+  "widgetId": "h7f2p05ue5",
+  "widgetName": "Text_number_of_commentsCR"
 }

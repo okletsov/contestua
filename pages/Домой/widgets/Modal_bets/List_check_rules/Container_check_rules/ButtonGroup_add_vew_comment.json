@@ -126,7 +126,7 @@
   "needsErrorInfo": false,
   "orientation": "horizontal",
   "parentColumnSpace": 6.40625,
-  "parentId": "53g1f606wv",
+  "parentId": "w2opkjuqt8",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
@@ -141,6 +141,6 @@
   "topRow": 18,
   "type": "BUTTON_GROUP_WIDGET",
   "version": 1,
-  "widgetId": "frjs8b9ef5",
-  "widgetName": "ButtonGroup_add_vew_commentsCR"
+  "widgetId": "jvestlo1vb",
+  "widgetName": "ButtonGroup_add_vew_comment"
 }
