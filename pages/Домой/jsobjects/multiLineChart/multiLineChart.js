@@ -91,9 +91,11 @@ export default {
                 }
 			},
 			legend: {
+				top: 10,
 				data: nicknames
 			},
 			grid: {
+				top:80,
 				left: '3%',
 				right: '4%',
 				bottom: '3%',
