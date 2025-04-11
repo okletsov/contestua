@@ -3,7 +3,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 176,
+  "bottomRow": 171,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "617dy0xwmv": {
@@ -107,8 +107,8 @@
   "mobileRightColumn": 24,
   "mobileTopRow": 127,
   "needsErrorInfo": true,
-  "originalBottomRow": 90,
-  "originalTopRow": 39,
+  "originalBottomRow": 176,
+  "originalTopRow": 125,
   "parentColumnSpace": 24.515625,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -116,11 +116,11 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "showDataPointLabel": false,
-  "topRow": 125,
+  "topRow": 120,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "ctwqbqbsww",
   "widgetName": "Chart_running_sum",
-  "xAxisName": "Номер ставки",
-  "yAxisName": "Юниты"
+  "xAxisName": "",
+  "yAxisName": ""
 }
