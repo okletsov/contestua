@@ -64,11 +64,11 @@
       "isDefault": false
     },
     {
-      "id": "Аналитика",
+      "id": "Графики",
       "isDefault": false
     },
     {
-      "id": "Графики",
+      "id": "Аналитика",
       "isDefault": false
     }
   ],
