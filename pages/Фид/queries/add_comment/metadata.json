@@ -27,9 +27,9 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "name": "add_comment",
     "pageId": "Фид",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

@@ -26,10 +26,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "multiLineChart.transformByDate",
     "name": "transformByDate",
     "pageId": "Домой",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

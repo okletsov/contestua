@@ -26,10 +26,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "multiLineChart.getNicknames",
     "name": "getNicknames",
     "pageId": "Домой",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

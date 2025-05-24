@@ -26,10 +26,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "utils.formatDateTimeWithYear",
     "name": "formatDateTimeWithYear",
     "pageId": "Домой",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

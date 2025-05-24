@@ -27,10 +27,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "multiLineChart.getData",
     "name": "getData",
     "pageId": "Домой",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "utils.priorContestsData",
     "name": "priorContestsData",
     "pageId": "Победитель года",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

@@ -26,10 +26,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "utils.commaSeparate",
     "name": "commaSeparate",
     "pageId": "Аналитика",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

@@ -26,10 +26,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "utils.formatDateTimeWithYear",
     "name": "formatDateTimeWithYear",
     "pageId": "Фид",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

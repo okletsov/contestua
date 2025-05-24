@@ -26,10 +26,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "multiLineChart.getIndexes",
     "name": "getIndexes",
     "pageId": "Графики",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

@@ -26,10 +26,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "multiLineChart.transformByBet",
     "name": "transformByBet",
     "pageId": "Графики",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

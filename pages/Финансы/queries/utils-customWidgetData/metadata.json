@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "utils.customWidgetData",
     "name": "customWidgetData",
     "pageId": "Финансы",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

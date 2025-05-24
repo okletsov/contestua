@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "utils.getTitleForBetsModal",
     "name": "getTitleForBetsModal",
     "pageId": "Домой",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

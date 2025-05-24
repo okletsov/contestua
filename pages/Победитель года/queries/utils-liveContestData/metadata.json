@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "utils.liveContestData",
     "name": "liveContestData",
     "pageId": "Победитель года",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }

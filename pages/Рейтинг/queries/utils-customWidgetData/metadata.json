@@ -22,10 +22,10 @@
         "key": "body"
       }
     ],
-    "executeOnLoad": false,
     "fullyQualifiedName": "utils.customWidgetData",
     "name": "customWidgetData",
     "pageId": "Рейтинг",
+    "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
 }
