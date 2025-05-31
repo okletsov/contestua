@@ -39,7 +39,7 @@
   "mobileRightColumn": 4,
   "mobileTopRow": 6,
   "needsErrorInfo": false,
-  "onClick": "{{cr_raw_ongoing.run().then(() => {});\ncr_biggest_odd.run();\ncr_winning_streak.run();\ncurrent_winning_streak.run();\nrecent_bets.run();\nfuture_bets.run();\nlive_bets.run();\ndop_stavki.run();\nlast_data_update.run();\ncr_raw_ongoing_2nd_month.run();\ncheck_rules.run();\nlast_allowed_bet.run();\nbets_with_recent_comments.run();\nrunning_sum_by_bet.run();\nrunning_sum_by_date.run();}}",
+  "onClick": "{{cr_raw_ongoing.run();\ncr_biggest_odd.run();\ncr_winning_streak.run();\ncurrent_winning_streak.run();\nrecent_bets.run();\nfuture_bets.run();\nlive_bets.run();\ndop_stavki.run();\nlast_data_update.run();\ncr_raw_ongoing_2nd_month.run();\ncheck_rules.run();\nlast_allowed_bet.run();\nbets_with_recent_comments.run();\nrunning_sum_by_bet.run();\nrunning_sum_by_date.run();}}",
   "originalBottomRow": 8,
   "originalTopRow": 4,
   "parentColumnSpace": 14.234375,
