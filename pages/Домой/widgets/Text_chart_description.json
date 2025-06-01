@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 194,
+  "bottomRow": 102,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -51,7 +51,7 @@
   "text": "По оси У: юниты\nПо оси Х: или номер ставки, или день конкурса\n\nНажатием на имя участника можно убрать его линию с графика",
   "textAlign": "LEFT",
   "textColor": "#f4f4f5",
-  "topRow": 186,
+  "topRow": 94,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
