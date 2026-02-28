@@ -38,7 +38,7 @@
   "iconSVG": "https://appcdn.appsmith.com/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
   "isDeprecated": false,
   "isLoading": false,
-  "isVisible": "{{currentItem.actual_result === 'not-played' ? false : true}}",
+  "isVisible": "{{currentItem.actual_result === 'not-played' ? false : currentItem.main_score === 'null' ? false : true}}",
   "key": "taof8sgrxu",
   "leftColumn": 39,
   "maxDynamicHeight": 9000,
@@ -66,7 +66,7 @@
     "Suggested",
     "Content"
   ],
-  "text": "{{currentItem.main_score}}",
+  "text": "<span style=\"color:{{'#ffffffe6'}}; font-size:12px;\">{{currentItem.main_score}}</span>\n<span style=\"color:{{'#71717a'}}; font-size:9.5px;\">{{currentItem.detailed_score}} </span>",
   "textAlign": "CENTER",
   "textColor": "rgba(255, 255, 255, 0.9)",
   "topRow": 5,

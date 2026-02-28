@@ -1,5 +1,5 @@
 export default {
-	customWidgetData() {
+	resultHistory() {
 		return {
 			"resultsHistory": results_history.data
 		}

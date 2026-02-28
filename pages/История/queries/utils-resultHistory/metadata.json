@@ -1,6 +1,6 @@
 {
   "gitSyncId": "661eca10b7e3352fe43e8a8c_f90414da-9edd-4602-a8dc-0451786f1633",
-  "id": "История_utils.customWidgetData",
+  "id": "История_utils.resultHistory",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
@@ -22,8 +22,8 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "utils.customWidgetData",
-    "name": "customWidgetData",
+    "fullyQualifiedName": "utils.resultHistory",
+    "name": "resultHistory",
     "pageId": "История",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false

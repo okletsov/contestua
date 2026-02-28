@@ -1,0 +1,1 @@
+SELECT * FROM appsmith_result_history_seas_aggr;

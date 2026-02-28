@@ -99,9 +99,6 @@
       "key": "primaryKeys"
     },
     {
-      "key": "onItemClick"
-    },
-    {
       "key": "isVisible"
     }
   ],
@@ -133,7 +130,7 @@
   "mobileRightColumn": 32,
   "mobileTopRow": 116,
   "needsErrorInfo": false,
-  "onItemClick": "",
+  "onItemClick": "{{}}",
   "originalBottomRow": 201,
   "originalTopRow": 6,
   "pageSize": 10,
