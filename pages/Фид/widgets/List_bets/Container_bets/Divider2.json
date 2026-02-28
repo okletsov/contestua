@@ -21,7 +21,7 @@
   "iconSVG": "https://appcdn.appsmith.com/static/media/icon.3b7d47d7bd70da418a827287042cbb7f.svg",
   "isDeprecated": false,
   "isLoading": false,
-  "isVisible": "{{currentItem.actual_result === 'not-played' ? false : true}}",
+  "isVisible": "{{currentItem.actual_result === 'not-played' ? false : currentItem.main_score === 'null' ? false : true}}",
   "key": "7izeximiue",
   "leftColumn": 37,
   "minWidth": 450,
