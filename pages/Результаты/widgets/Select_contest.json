@@ -24,6 +24,9 @@
   "dynamicPropertyPathList": [
     {
       "key": "sourceData"
+    },
+    {
+      "key": "onOptionChange"
     }
   ],
   "dynamicTriggerPathList": [
@@ -56,7 +59,7 @@
   "mobileRightColumn": 20,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
-  "onOptionChange": "{{cr_general.run();\ncr_winning_streak.run();\ncr_biggest_odds.run();\ncr_general_mon1.run();\ncr_general_mon2.run();\ncr_awards.run();\ncr_finances_total.run()}}",
+  "onOptionChange": "{{cr_general.run();\ncr_winning_streak.run();\ncr_biggest_odds.run();\ncr_general_mon1.run();\ncr_general_mon2.run();\ncr_awards.run();\ncr_finances_total.run();\nrunning_sum_by_bet.run();\nrunning_sum_by_date.run()}}",
   "optionLabel": "label",
   "optionValue": "value",
   "parentColumnSpace": 14.234375,
