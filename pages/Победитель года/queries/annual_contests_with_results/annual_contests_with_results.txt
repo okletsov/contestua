@@ -12,6 +12,7 @@ from (
 		join annual_x_seasonal_contest axsc on c.id = axsc.annual_contest_id
 		join cr_general cg on cg.contest_id = axsc.seasonal_contest_id 
 	where c.`type` = 'annual'
+		and c.start_date >= '2018-08-31 21:00:01'
 	group by axsc.annual_contest_id 
 	order by c.`year` desc
 ) t1
