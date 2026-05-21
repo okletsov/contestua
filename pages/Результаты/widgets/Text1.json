@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 144,
+  "bottomRow": 183,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,15 +11,23 @@
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "fontSize": "0.875rem",
   "fontStyle": "BOLD",
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{running_sum_by_date.data.length > 0}}",
   "key": "8fypjkanep",
   "leftColumn": 0,
   "maxDynamicHeight": 9000,
@@ -43,7 +51,7 @@
   "text": "По оси У: юниты\nПо оси Х: или номер ставки, или день конкурса\n\nНажатием на имя участника можно убрать его линию с графика",
   "textAlign": "LEFT",
   "textColor": "#f4f4f5",
-  "topRow": 136,
+  "topRow": 175,
   "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
   "type": "TEXT_WIDGET",
   "version": 1,
