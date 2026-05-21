@@ -27,7 +27,7 @@ from (
 		join user_nickname un on un.user_id = cf.user_id 
 	where 1=1
 		and un.is_active = 1
-		and un.nickname not in ('DavidsKV', 'Dnepr', 'JovtoBlakutni', 'Sayda', 'Ars', 'BeTeLGeuSe')
+		and un.nickname not in ('DavidsKV', 'Dnepr', 'JovtoBlakutni', 'Sayda', 'Ars', 'BeTeLGeuSe', 'dimka300688', 'midlan', 'Leicester', 'arabijoni')
 		and cf.contest_id not in (
 				SELECT 
 					id

@@ -3,7 +3,7 @@
   "allowScroll": false,
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 235,
+  "bottomRow": 135,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "chartData": {
     "jdj1oyhtsx": {
@@ -76,13 +76,21 @@
     },
     {
       "key": "boxShadow"
+    },
+    {
+      "key": "isVisible"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [],
   "flexVerticalAlignment": "start",
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{running_sum_by_date.data.length > 0}}",
   "key": "29cqzp33oo",
   "labelOrientation": "auto",
   "leftColumn": 0,
@@ -92,8 +100,8 @@
   "mobileRightColumn": 24,
   "mobileTopRow": 180,
   "needsErrorInfo": true,
-  "originalBottomRow": 235,
-  "originalTopRow": 181,
+  "originalBottomRow": 135,
+  "originalTopRow": 81,
   "parentColumnSpace": 15.25,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -101,7 +109,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "showDataPointLabel": false,
-  "topRow": 181,
+  "topRow": 81,
   "type": "CHART_WIDGET",
   "version": 1,
   "widgetId": "51if7x6t42",

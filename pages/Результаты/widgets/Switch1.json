@@ -2,15 +2,23 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "alignWidget": "LEFT",
   "animateLoading": true,
-  "bottomRow": 180,
+  "bottomRow": 80,
   "boxShadow": "none",
   "defaultSwitchState": false,
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
+    },
+    {
+      "key": "isVisible"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "isVisible"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onChange"
@@ -18,7 +26,7 @@
   ],
   "isDisabled": false,
   "isLoading": false,
-  "isVisible": true,
+  "isVisible": "{{running_sum_by_date.data.length > 0}}",
   "key": "y7kbzake62",
   "label": "Тип графика: по номеру ставки / по дню события",
   "labelPosition": "Left",
@@ -33,15 +41,15 @@
   "mobileTopRow": 16,
   "needsErrorInfo": false,
   "onChange": "",
-  "originalBottomRow": 180,
-  "originalTopRow": 176,
+  "originalBottomRow": 80,
+  "originalTopRow": 76,
   "parentColumnSpace": 15.25,
   "parentId": "0",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
   "rightColumn": 64,
-  "topRow": 176,
+  "topRow": 76,
   "type": "SWITCH_WIDGET",
   "version": 1,
   "widgetId": "lsz9fj5qt7",
